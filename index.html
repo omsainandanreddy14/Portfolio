@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Data Analyst & Computer Science Professional - Portfolio showcasing projects, skills, and achievements">
+    <meta name="keywords" content="Data Analyst, Python, Power BI, Data Science">
+    <title>Omsai Nandan Reddy | Data Analyst & Computer Science Professional</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Animated background accent lights -->
+    <div class="accent-light accent-light-1"></div>
+    <div class="accent-light accent-light-2"></div>
+    <div class="accent-light accent-light-3"></div>
+
+    <!-- Nebula-like glowing orbs -->
+    <div class="nebula nebula-1"></div>
+    <div class="nebula nebula-2"></div>
+
+    <!-- Particle background -->
+    <div class="particle-bg" id="particleContainer"></div>
+
+    <!-- Glow on scroll effect -->
+    <div class="glow-on-scroll"></div>
+
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">Omsai<span>Reddy</span></div>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#summary" class="nav-link">About</a></li>
+                    <li><a href="#process" class="nav-link">Process</a></li>
+                    <li><a href="#education" class="nav-link">Education</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#certificates" class="nav-link">Certificates</a></li>
+                    <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <style>
+        body {
+            background-color: #020617 !important;
+            background-image:
+                radial-gradient(circle at 15% 50%, rgba(14, 165, 233, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 85% 30%, rgba(56, 189, 248, 0.06) 0%, transparent 50%),
+                linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px) !important;
+            background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px !important;
+            background-attachment: fixed !important;
+        }
+
+        .project-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px) scale(1.02) !important;
+            box-shadow: 0 20px 40px rgba(14, 165, 233, 0.2) !important;
+        }
+
+        .info-card {
+            transition: all 0.4s ease !important;
+        }
+
+        .info-card:hover {
+            transform: translateY(-8px) scale(1.03) !important;
+            box-shadow: 0 15px 30px rgba(14, 165, 233, 0.2) !important;
+            border-color: rgba(56, 189, 248, 0.6) !important;
+        }
+
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes gradientText {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes pulseGlow {
+            0% {
+                box-shadow: 0 0 0 0 rgba(14, 165, 233, 0.4);
+            }
+
+            70% {
+                box-shadow: 0 0 0 10px rgba(14, 165, 233, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(14, 165, 233, 0);
+            }
+        }
+
+        @keyframes floatParticles {
+            0% {
+                transform: translateY(100vh) scale(0);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-100px) scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        @keyframes textFloat {
+
+            0%,
+            100% {
+                transform: translateY(0) scale(1);
+                text-shadow: 0 5px 15px rgba(0, 210, 255, 0.3);
+            }
+
+            50% {
+                transform: translateY(-8px) scale(1.02);
+                text-shadow: 0 15px 25px rgba(255, 138, 0, 0.5);
+            }
+        }
+
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(14, 165, 233, 0.6);
+            animation: floatParticles linear infinite;
+        }
+    </style>
+    <section id="home" class="hero-section"
+        style="position: relative; overflow: hidden; background: linear-gradient(-45deg, rgba(2, 6, 23, 1), rgba(15, 23, 42, 1), rgba(14, 165, 233, 0.1), rgba(30, 58, 138, 0.2)); background-size: 400% 400%; animation: gradientBG 15s ease infinite;">
+        <!-- Particle Container -->
+        <div id="particleContainer"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none;">
+        </div>
+
+        <div class="home-container" style="position: relative; z-index: 1;">
+            <div class="profile-section">
+                <div class="profile-wrapper" style="position: relative;">
+                    <img src="profile.JPEG" class="profile-img" alt="Putluru Om Sai Nandan Reddy - Data Analyst">
+                    <div class="availability-badge"
+                        style="position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%); background: rgba(14, 165, 233, 0.15); border: 1px solid var(--primary-color); border-radius: 20px; padding: 5px 15px; font-size: 0.85rem; color: var(--text-primary); backdrop-filter: blur(5px); animation: pulseGlow 2s infinite; white-space: nowrap; font-weight: 500;">
+                        👉 Open to Internships & Opportunities
+                    </div>
+                </div>
+                <div class="social-quick-links">
+                    <a href="https://github.com/omsainandanreddy14" target="_blank" class="social-btn" title="GitHub">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/omsai-nandan-reddy14/" target="_blank" class="social-btn"
+                        title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="home-text">
+                <h1 class="hero-title"
+                    style="font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; line-height: 1.2; margin-bottom: 20px;">
+                    Hi, I'm <br>
+                    <span class="highlight"
+                        style="background: linear-gradient(90deg, #ff1b6b, #45caff, #ff8a00, #9c27b0, #ff1b6b); background-size: 300% auto; -webkit-background-clip: text; background-clip: text; color: transparent; animation: gradientText 4s linear infinite, textFloat 4s ease-in-out infinite; display: inline-block; padding-bottom: 10px; font-size: clamp(3rem, 7vw, 5rem); letter-spacing: -1px; text-shadow: 0 0 20px rgba(69, 202, 255, 0.3); font-family: 'Georgia', 'Times New Roman', serif;">Putluru
+                        Om Sai Nandan Reddy</span>
+                </h1>
+                <div
+                    style="font-size: 1.8rem; margin-bottom: 25px; color: var(--text-secondary); display: flex; align-items: center; min-height: 2.5rem; font-weight: 600;">
+                    <span class="typing-text" style="color: var(--primary-color);"></span><span class="cursor"
+                        style="display: inline-block; width: 3px; background-color: var(--primary-color); margin-left: 2px; animation: blink 1s step-end infinite;">&nbsp;</span>
+                </div>
+                <p class="hero-description"
+                    style="font-size: 1.15rem; line-height: 1.8; margin-bottom: 35px; max-width: 650px;">
+                    Data Analyst passionate about transforming raw data into actionable insights using Python, Power BI,
+                    and SQL. Focused on solving real-world problems through data-driven decision-making.
+                </p>
+                <div class="hero-buttons" style="display: flex; gap: 15px; flex-wrap: wrap;">
+                    <a href="resume.pdf" class="btn btn-primary" download
+                        style="display: inline-flex; align-items: center; justify-content: center; padding: 12px 25px; border-radius: 30px; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: #fff; text-decoration: none; font-weight: 600; transition: transform 0.3s, box-shadow 0.3s; gap: 10px; box-shadow: 0 4px 15px rgba(14, 165, 233, 0.4); border: none;">
+                        <i class="fas fa-download"></i> Download CV
+                    </a>
+                    <a href="#projects" class="btn btn-secondary"
+                        style="display: inline-flex; align-items: center; justify-content: center; padding: 12px 25px; border-radius: 30px; background: rgba(255,255,255,0.05); color: var(--text-primary); text-decoration: none; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); transition: all 0.3s; gap: 10px; backdrop-filter: blur(5px);"
+                        onmouseover="this.style.background='rgba(255,255,255,0.1)'"
+                        onmouseout="this.style.background='rgba(255,255,255,0.05)'">
+                        <i class="fas fa-project-diagram"></i> View Projects
+                    </a>
+                    <a href="#contact" class="btn btn-secondary"
+                        style="display: inline-flex; align-items: center; justify-content: center; padding: 12px 25px; border-radius: 30px; background: rgba(14, 165, 233, 0.1); color: var(--primary-color); text-decoration: none; font-weight: 600; border: 1px solid rgba(14, 165, 233, 0.3); transition: all 0.3s; gap: 10px; backdrop-filter: blur(5px);"
+                        onmouseover="this.style.background='rgba(14, 165, 233, 0.2)'"
+                        onmouseout="this.style.background='rgba(14, 165, 233, 0.1)'">
+                        <i class="fas fa-envelope"></i> Contact Me
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <svg class="scroll-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M12 5v14m0 0l-7-7m7 7l7-7" />
+            </svg>
+        </div>
+    </section>
+
+    <section id="summary" class="about-section">
+        <div class="section-container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content" style="display: flex; flex-wrap: wrap; gap: 40px; align-items: stretch;">
+                <div class="summary-text-col" style="flex: 1; min-width: 300px; display: flex; flex-direction: column;">
+                    <p class="about-text">
+                        I am currently pursuing B.Tech in Computer Science and Engineering at <strong>Lovely
+                            Professional University</strong>. My passion lies in transforming raw data into meaningful
+                        insights that drive decision-making. With a curious mind and a love for problem-solving, I'm
+                        driven to explore the intersection of technology and business analytics.
+                    </p>
+                    <p class="about-text">
+                        My expertise spans <strong>Data Analytics, Data Science, Machine Learning, and AI
+                            systems</strong>. I excel at analyzing large datasets, creating compelling visualizations,
+                        and building intelligent applications that solve real-world problems. I believe that data
+                        storytelling is as important as data analysis—presenting insights in a way that drives action.
+                    </p>
+                    <p class="about-text" style="margin-bottom: 25px;">
+                        With hands-on experience in <strong>Python, Power BI, SQL, OpenCV,</strong> and data science
+                        libraries including <strong>Pandas, NumPy, Matplotlib, Seaborn, and Scikit-learn</strong>, I'm
+                        equipped to tackle complex analytical challenges and communicate findings effectively.
+                    </p>
+                </div> <!-- end summary-text-col -->
+
+                <div class="summary-cards-col"
+                    style="flex: 0 0 350px; width: 100%; min-width: 300px; display: flex; flex-direction: column; gap: 20px;">
+                    <div
+                        style="background: rgba(10, 20, 40, 0.4); border: 1px solid rgba(14, 165, 233, 0.2); padding: 30px 20px; border-radius: 20px;">
+                        <h3
+                            style="font-size: 1.3rem; margin-bottom: 25px; text-align: center; color: var(--text-primary);">
+                            Core Strengths</h3>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                            <div style="background: rgba(255, 255, 255, 0.03); padding: 20px 10px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.05); text-align: center; transition: all 0.3s;"
+                                onmouseover="this.style.transform='translateY(-5px)'; this.style.borderColor='var(--secondary-color)'; this.style.background='rgba(14, 165, 233, 0.1)'"
+                                onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(255, 255, 255, 0.05)'; this.style.background='rgba(255, 255, 255, 0.03)'">
+                                <i class="fas fa-chart-line"
+                                    style="font-size: 2rem; color: var(--primary-color); margin-bottom: 10px; display: block;"></i>
+                                <span style="font-size: 0.95rem; font-weight: 600; color: var(--text-primary);">Data
+                                    Analysis</span>
+                            </div>
+                            <div style="background: rgba(255, 255, 255, 0.03); padding: 20px 10px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.05); text-align: center; transition: all 0.3s;"
+                                onmouseover="this.style.transform='translateY(-5px)'; this.style.borderColor='var(--secondary-color)'; this.style.background='rgba(14, 165, 233, 0.1)'"
+                                onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(255, 255, 255, 0.05)'; this.style.background='rgba(255, 255, 255, 0.03)'">
+                                <i class="fas fa-brain"
+                                    style="font-size: 2rem; color: var(--primary-color); margin-bottom: 10px; display: block;"></i>
+                                <span style="font-size: 0.95rem; font-weight: 600; color: var(--text-primary);">Machine
+                                    Learning</span>
+                            </div>
+                            <div style="background: rgba(255, 255, 255, 0.03); padding: 20px 10px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.05); text-align: center; transition: all 0.3s;"
+                                onmouseover="this.style.transform='translateY(-5px)'; this.style.borderColor='var(--secondary-color)'; this.style.background='rgba(14, 165, 233, 0.1)'"
+                                onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(255, 255, 255, 0.05)'; this.style.background='rgba(255, 255, 255, 0.03)'">
+                                <i class="fas fa-chart-pie"
+                                    style="font-size: 2rem; color: var(--primary-color); margin-bottom: 10px; display: block;"></i>
+                                <span
+                                    style="font-size: 0.95rem; font-weight: 600; color: var(--text-primary);">Visualization</span>
+                            </div>
+                            <div style="background: rgba(255, 255, 255, 0.03); padding: 20px 10px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.05); text-align: center; transition: all 0.3s;"
+                                onmouseover="this.style.transform='translateY(-5px)'; this.style.borderColor='var(--secondary-color)'; this.style.background='rgba(14, 165, 233, 0.1)'"
+                                onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(255, 255, 255, 0.05)'; this.style.background='rgba(255, 255, 255, 0.03)'">
+                                <i class="fas fa-lightbulb"
+                                    style="font-size: 2rem; color: var(--primary-color); margin-bottom: 10px; display: block;"></i>
+                                <span style="font-size: 0.95rem; font-weight: 600; color: var(--text-primary);">Problem
+                                    Solving</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        style="background: linear-gradient(135deg, rgba(14, 165, 233, 0.1), rgba(56, 189, 248, 0.05)); padding: 25px; border-radius: 15px; border-left: 4px solid var(--primary-color);">
+                        <h3 style="color: var(--secondary-color); margin-bottom: 10px; font-size: 1.2rem;"><i
+                                class="fas fa-bullseye" style="margin-right: 10px;"></i>Career Objective</h3>
+                        <p style="color: var(--text-secondary); margin: 0; font-size: 1.05rem; line-height: 1.6;">
+                            To build a career as a Data Analyst where I can leverage data-driven insights, analytical
+                            skills, and visualization techniques to solve real-world business problems and contribute to
+                            organizational growth.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="process" class="skills-section" style="background: rgba(2, 6, 23, 0.5);">
+        <div class="section-container">
+            <h2 class="section-title">My Data Analytics Approach</h2>
+            <p
+                style="text-align: center; color: var(--text-secondary); margin-bottom: 40px; font-size: 1.1rem; max-width: 800px; margin-inline: auto;">
+                To solve real-world problems effectively, I follow a structured and methodical approach that ensures
+                accuracy, clarity, and impactful outcomes.
+            </p>
+
+            <div class="timeline" style="margin-bottom: 60px;">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content education-card">
+                        <h3 style="color: var(--primary-color); margin-bottom: 10px;">Understanding the Problem & Data
+                            Collection</h3>
+                        <p>I start by clearly identifying the problem objectives and gathering relevant data from
+                            appropriate and reliable sources to build a strong analytical foundation.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content education-card">
+                        <h3 style="color: var(--primary-color); margin-bottom: 10px;">Data Cleaning & Exploratory
+                            Analysis</h3>
+                        <p>I preprocess the data by handling missing values, removing inconsistencies, and conducting
+                            exploratory data analysis (EDA) to identify key patterns, trends, and relationships.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content education-card">
+                        <h3 style="color: var(--primary-color); margin-bottom: 10px;">Model Building & Performance
+                            Evaluation</h3>
+                        <p>I implement suitable machine learning models and statistical methods, followed by evaluating
+                            their performance using relevant metrics to ensure accuracy and effectiveness.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content education-card">
+                        <h3 style="color: var(--primary-color); margin-bottom: 10px;">Insight Presentation & Decision
+                            Support</h3>
+                        <p>Finally, I translate the results into meaningful insights through visualizations and
+                            dashboards, enabling better understanding and supporting informed decision-making.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="section-title">My Capabilities</h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="card-icon"><i class="fas fa-chart-pie"></i></div>
+                    <h3>1. Data Analysis & Business Insights</h3>
+                    <p style="color: var(--text-secondary); margin-top: 15px;">I analyze both structured and
+                        unstructured datasets to uncover meaningful patterns, trends, and relationships, enabling
+                        data-driven decision-making and strategic business insights.</p>
+                </div>
+                <div class="about-card">
+                    <div class="card-icon"><i class="fas fa-brain"></i></div>
+                    <h3>2. Machine Learning & Predictive Modeling</h3>
+                    <p style="color: var(--text-secondary); margin-top: 15px;">I build and implement machine learning
+                        models for tasks such as prediction, classification, and clustering, applying algorithms to
+                        solve real-world problems efficiently.</p>
+                </div>
+                <div class="about-card">
+                    <div class="card-icon"><i class="fas fa-project-diagram"></i></div>
+                    <h3>3. Data Visualization & Insight Communication</h3>
+                    <p style="color: var(--text-secondary); margin-top: 15px;">I create intuitive dashboards and
+                        visualizations using tools like Power BI and Python libraries to present complex data in a
+                        clear, concise, and actionable manner.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="education-section">
+        <div class="section-container">
+            <h2 class="section-title">Education & Academic Background</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content education-card">
+                        <h3>Lovely Professional University</h3>
+                        <p class="degree">B.Tech Computer Science and Engineering</p>
+                        <p class="meta">2022 - 2026 | CGPA: 7.8</p>
+                        <p>Specializing in Data Analytics and Software Development</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content education-card">
+                        <h3>PGR Junior College</h3>
+                        <p class="degree">Intermediate (MPC)</p>
+                        <p class="meta">2021 - 2023 | Percentage: 96.3%</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content education-card">
+                        <h3>Indus EM High School</h3>
+                        <p class="degree">SSC (10th Standard)</p>
+                        <p class="meta">2020 - 2021 | Percentage: 96.6%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills-section">
+        <div class="section-container">
+            <h2 class="section-title">Technical Skills & Tools</h2>
+            <div class="skills-intro">
+                <p>A comprehensive toolkit of skills and expertise developed through continuous learning and real-world
+                    applications</p>
+            </div>
+            <style>
+                .skill-card {
+                    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+                    background: rgba(10, 20, 40, 0.5) !important;
+                    border: 1px solid rgba(14, 165, 233, 0.15) !important;
+                    backdrop-filter: blur(10px);
+                }
+
+                .skill-card:hover {
+                    transform: scale(1.05) translateY(-5px) !important;
+                    box-shadow: 0 15px 35px rgba(14, 165, 233, 0.3) !important;
+                    border-color: var(--primary-color) !important;
+                }
+
+                .skills-grid {
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr) !important;
+                    gap: 20px !important;
+                }
+
+                @media (max-width: 1100px) {
+                    .skills-grid {
+                        grid-template-columns: repeat(2, 1fr) !important;
+                    }
+                }
+
+                @media (max-width: 600px) {
+                    .skills-grid {
+                        grid-template-columns: 1fr !important;
+                    }
+                }
+            </style>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-terminal"></i>
+                    </div>
+                    <h3>👉 Programming & Query Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">SQL</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>👉 Data Science & Machine Learning</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">NumPy</span>
+                        <span class="skill-tag">Scikit-learn</span>
+                        <span class="skill-tag">Matplotlib</span>
+                        <span class="skill-tag">Seaborn</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>👉 Analytics & Business Intelligence Tools</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Power BI</span>
+                        <span class="skill-tag">Excel</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">MySQL</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-window-maximize"></i>
+                    </div>
+                    <h3>👉 Web Technologies</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">CSS</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Streamlit</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <div class="section-container">
+            <h2 class="section-title">Projects & Case Studies</h2>
+            <div class="projects-intro">
+                <p>Showcasing real-world applications and innovative solutions built with modern technologies</p>
+            </div>
+            <div class="projects-container">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Loan Analysis Dashboard</h3>
+                        <span class="project-badge">Power BI</span>
+                    </div>
+                    <p class="project-description" style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">
+                        <strong>Challenge:</strong> Analyze 20K+ loan records to predict default trends & risk
+                        segments.<br>
+                        <strong>Execution:</strong> Cleaned datasets & designed a dynamic Power BI dashboard profiling
+                        borrower risk behaviors.<br>
+                        <strong>Outcome & Impact:</strong> Enhanced real-time risk visibility, driving faster,
+                        data-backed lending strategies.
+                    </p>
+                    <div class="project-highlights">
+                        <span class="highlight">✓ 20,000+ Records Analyzed</span>
+                        <span class="highlight">✓ Risk Assessment Models</span>
+                        <span class="highlight">✓ Interactive Visualizations</span>
+                    </div>
+                    <p class="project-tech"><strong>Tech Stack:</strong> Power BI, Power Query, Data Analysis</p>
+                    <a href="https://github.com/omsainandanreddy14/Loan-Analysis-Dashboard-PowerBI" class="project-link"
+                        target="_blank">View Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>AI Fitness Coach</h3>
+                        <span class="project-badge">AI/ML</span>
+                    </div>
+                    <p class="project-description" style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">
+                        <strong>Challenge:</strong> Fix incorrect exercise postures lacking real-time coaching causing
+                        injuries.<br>
+                        <strong>Execution:</strong> Developed an AI-trainer using Python & OpenCV for live pose
+                        detection and precise rep counting.<br>
+                        <strong>Outcome & Impact:</strong> Delivered instant corrective feedback, dramatically elevating
+                        workout efficiency.
+                    </p>
+                    <div class="project-highlights">
+                        <span class="highlight">✓ Real-time pose detection</span>
+                        <span class="highlight">✓ Exercise repetition counting</span>
+                        <span class="highlight">✓ AI-based posture analysis</span>
+                        <span class="highlight">✓ Supports multiple exercises</span>
+                    </div>
+                    <p class="project-tech"><strong>Tech Stack:</strong> Python, OpenCV, MediaPipe, NumPy, Streamlit</p>
+                    <a href="https://github.com/omsainandanreddy14/ai_project" class="project-link" target="_blank">View
+                        Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Local Authority Statistics Analysis & Visualization</h3>
+                        <span class="project-badge">Data Analysis</span>
+                    </div>
+                    <p class="project-description" style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">
+                        <strong>Challenge:</strong> Interpret massive local authority datasets to uncover regional
+                        trends.<br>
+                        <strong>Execution:</strong> Processed real-world stats using Pandas/NumPy, driving deep EDA &
+                        correlational metrics.<br>
+                        <strong>Outcome & Impact:</strong> Visualized meaningful patterns, directly supporting localized
+                        data-driven decision making.
+                    </p>
+                    <div class="project-highlights">
+                        <span class="highlight">✓ Real-world dataset analysis</span>
+                        <span class="highlight">✓ Data cleaning & preprocessing</span>
+                        <span class="highlight">✓ Exploratory Data Analysis (EDA)</span>
+                        <span class="highlight">✓ Statistical insights & visualization</span>
+                    </div>
+                    <p class="project-tech"><strong>Tech Stack:</strong> Python, Pandas, NumPy, Matplotlib, Data
+                        Analysis</p>
+                    <a href="https://github.com/omsainandanreddy14/Local-Authority-Statistics-Project"
+                        class="project-link" target="_blank">View Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="certifications-section">
+        <div class="section-container">
+            <h2 class="section-title">Professional Experience</h2>
+
+            <div class="experience-section">
+                <div class="training-grid">
+                    <div class="training-card">
+                        <div class="training-header">
+                            <h4>Data Science Intern | CodSoft</h4>
+                            <span class="training-badge">November 2025 - December 2025</span>
+                        </div>
+                        <p class="training-desc">
+                            <strong>Role:</strong> Data Science Intern at CodSoft (November 2025 - December 2025).
+                            Applied an end-to-end data science workflow to deliver actionable risk insights through
+                            rigorous analysis and model evaluation.
+                        </p>
+                        <ul class="training-features">
+                            <li>Analyzed large datasets using Python (Pandas, NumPy)</li>
+                            <li>Performed data cleaning, preprocessing, and feature engineering</li>
+                            <li>Built machine learning models using Scikit-learn</li>
+                            <li>Applied algorithms like Regression and Classification</li>
+                            <li>Evaluated models using accuracy, precision, recall</li>
+                        </ul>
+                        <p class="training-tech"><strong>Tech:</strong> Python, Pandas, NumPy, Scikit-learn, Machine
+                            Learning</p>
+                        <a href="https://drive.google.com/drive/folders/1Wo4HZulzPqBy0zcUigWGD3Wf619MBn8t?usp=drive_link"
+                            target="_blank" class="training-link">
+                            <i class="fas fa-external-link-alt"></i> View Certificate
+                        </a>
+                        <a href="https://github.com/omsainandanreddy14/CODSOFT" target="_blank" class="training-link">
+                            <i class="fab fa-github"></i> View GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="training-section" style="margin-top: 50px;">
+                <h3 class="cert-subtitle" style="text-align: left; margin-bottom: 20px; font-size: 1.8rem;">Training
+                    Programs</h3>
+                <div class="training-grid">
+                    <div class="training-card">
+                        <div class="training-header">
+                            <h4>Fundamentals of Data Structure using C++</h4>
+                            <span class="training-badge">June 2025 - July 2025</span>
+                        </div>
+                        <p class="training-desc">
+                            <strong>Overview:</strong> Intensive training focused on core Data Structures and Algorithms
+                            (DSA) concepts using C++
+                        </p>
+                        <ul class="training-features">
+                            <li>Arrays, Linked Lists, Stacks, Queues</li>
+                            <li>Trees, Graphs, Searching & Sorting</li>
+                            <li>Recursion & Advanced Algorithms</li>
+                            <li>Bank Account Management System Project</li>
+                        </ul>
+                        <p class="training-tech"><strong>Tech:</strong> C++, OOP, DSA, Problem Solving</p>
+                        <p class="training-outcome">
+                            <strong>Outcome:</strong> Enhanced problem-solving and algorithmic thinking through hands-on
+                            project development
+                        </p>
+                        <a href="https://files.lpu.in/umsweb/skilldevcourse/SkillDevelopmentCertificates/12304471_838_20_08_2025.pdf?_gl=1*18k9i8t*_gcl_au*MzYzNzgyODA3LjE3NjM5MjE2ODY.*_ga*MTk0Njk5NzI2Ny4xNzMzNTA2NzA2*_ga_WKLQCVXZ47*czE3NjM5MjE2ODUkbzIzJGcxJGcxJHQxNzYzOTIxNzAyJGo0MyRsMCRoMA.."
+                            target="_blank" class="training-link">
+                            <i class="fas fa-external-link-alt"></i> View Certificate
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certificates" class="skills-section">
+        <div class="section-container">
+            <h2 class="section-title">Certificates</h2>
+
+            <div class="cert-section">
+                <div class="cert-grid"
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; justify-items: center;">
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h4>Data Analytics Essentials</h4>
+                        <p>Cisco Networking Academy</p>
+                        <a href="https://drive.google.com/drive/folders/1h4YOOGb3IGsK7f2Dyd4vy335UQXZOf98?usp=drive_link"
+                            target="_blank" class="cert-link">
+                            <i class="fas fa-external-link-alt"></i> View Certificate
+                        </a>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h4>AWS Cloud Practitioner Essentials</h4>
+                        <p>Amazon Web Services</p>
+                        <a href="https://drive.google.com/drive/folders/1wQjiSZX1d_2Kci92jNlJO95_Iq0Hz0Tt?usp=drive_link"
+                            target="_blank" class="cert-link">
+                            <i class="fas fa-external-link-alt"></i> View Certificate
+                        </a>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h4>Power BI for Beginners</h4>
+                        <p>Simplilearn</p>
+                        <a href="https://certificates.simplicdn.net/share/9368904_96343241762780217245.pdf"
+                            target="_blank" class="cert-link">
+                            <i class="fas fa-external-link-alt"></i> View Certificate
+                        </a>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h4>Master Generative AI & Tools</h4>
+                        <p>Udemy</p>
+                        <a href="https://e2.udemymail.com/ls/click?upn=u001.fZrgtsiEFAuEd5Epw844o-2FRovDks96VP1VztnlU5HKAR2AKcj84D6tEtUmZlld4-2FypSjNns4dFP9LYm7G8x0-2BNwyIJriPvxbIrwWXdQb4LXjfndpqR-2BGcJ8yBVyWniuT57Srqaw7yHfmFyTDuPZ2TNDkBIdCgUtbb1IG0ePQPUzwwp3oERseHCYff-2BcjallH6Ib10OspwDJFJKbGoEOphw-3D-3DmQFE_WJ7MuUtLxXd6GGt07NHuZ27ervwuSy0bMkmofxoeB6u6hRW64HVqIwj9nSOB6WPUcNWLq8o1THChb9NIN2uUzbulZf5bv8vhcoLY0JyuDdVnBQ9wjEG42bUkXfp9lFFDmTvlemVyxQ5lE6Fm2kgQU3KreDI700TQvKZWJuV14GAi8rWqDHj9YbNI0UWBvLgSnxWjpOCSz4lYaO8pswQQu7nAJQJHoIAQSsLuAwsSldkTyYvGz-2FBrsn5JuG7Gp55-2Fz9zX5phBfZHAZfC4ou0LMGnxc5Ey0ksrKogWTL2FDphtG5ERzpzEW60Rr-2FM3b70y7XJDAiGHWuyAlaE8kzzcg-3D-3D"
+                            target="_blank" class="cert-link">
+                            <i class="fas fa-external-link-alt"></i> View Certificate
+                        </a>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h4>NPTEL Cloud Computing</h4>
+                        <p>IIT Bombay</p>
+                        <a href="https://drive.google.com/file/d/1Uu2LD_DEUL9RAS6ab6WKTAGMmo9s40pc/view?usp=drive_link"
+                            target="_blank" class="cert-link">
+                            <i class="fas fa-external-link-alt"></i> View Certificate
+                        </a>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h4>Responsive Web Design</h4>
+                        <p>FreeCodeCamp</p>
+                        <a href="https://www.freecodecamp.org/certification/fcc1fb04b39-03a9-4d40-a673-ef57db5725cb/responsive-web-design"
+                            target="_blank" class="cert-link">
+                            <i class="fas fa-external-link-alt"></i> View Certificate
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="achievements" class="certifications-section" style="background: rgba(10, 20, 40, 0.4);">
+        <div class="section-container">
+            <h2 class="section-title">Achievements & Activities</h2>
+
+            <div class="training-grid">
+                <!-- Volunteering -->
+                <div class="training-card"
+                    style="margin-bottom: 20px; transition: transform 0.3s; border-left: 4px solid var(--primary-color);">
+                    <h4 style="color: var(--secondary-color); font-size: 1.3rem; margin-bottom: 15px;"><i
+                            class="fas fa-hands-helping" style="margin-right: 10px;"></i> Volunteering & Community
+                        Service</h4>
+                    <ul class="training-features" style="list-style-type: none; padding: 0;">
+                        <li style="margin-bottom: 10px; font-size: 1.05rem;">
+                            <i class="fas fa-check-circle" style="color: var(--primary-color); margin-right: 10px;"></i>
+                            Volunteered at Jhansi Old Age Home, supporting elderly care and community development
+                            initiatives.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Hackathons -->
+                <div class="training-card"
+                    style="margin-bottom: 20px; transition: transform 0.3s; border-left: 4px solid var(--primary-color);">
+                    <h4 style="color: var(--secondary-color); font-size: 1.3rem; margin-bottom: 15px;"><i
+                            class="fas fa-trophy" style="margin-right: 10px;"></i> Hackathons & Coding Events</h4>
+                    <ul class="training-features" style="list-style-type: none; padding: 0;">
+                        <li style="margin-bottom: 10px; font-size: 1.05rem;">
+                            <i class="fas fa-check-circle" style="color: var(--primary-color); margin-right: 10px;"></i>
+                            Participated in Code-A-Haunt Hackathon organized by Coding Blocks LPU
+                            <a href="https://drive.google.com/drive/folders/1BT1vxH9zyvoRNu62MC-JYS86eohaqQJa?usp=drive_link"
+                                target="_blank"
+                                style="color: var(--primary-color); margin-left: 10px; text-decoration: none; font-weight: bold;"><i
+                                    class="fas fa-external-link-alt"></i> View Certificate</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Problem Solving -->
+                <div class="training-card"
+                    style="margin-bottom: 20px; transition: transform 0.3s; border-left: 4px solid var(--primary-color);">
+                    <h4 style="color: var(--secondary-color); font-size: 1.3rem; margin-bottom: 15px;"><i
+                            class="fas fa-code" style="margin-right: 10px;"></i> Technical Problem Solving</h4>
+                    <ul class="training-features" style="list-style-type: none; padding: 0;">
+                        <li style="margin-bottom: 10px; font-size: 1.05rem;">
+                            <i class="fas fa-check-circle" style="color: var(--primary-color); margin-right: 10px;"></i>
+                            Actively solving problems on LeetCode. Demonstrating strong algorithmic knowledge and
+                            continuous self-improvement in data structures.
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="section-container">
+            <h2 class="section-title">Contact & Networking</h2>
+            <p class="contact-subtitle">I'd love to hear from you. Let's create something amazing together!</p>
+            <div class="contact-wrapper" style="display: flex; justify-content: center; width: 100%;">
+                <div class="contact-info-box"
+                    style="max-width: 800px; width: 100%; text-align: center; padding: 50px; border-radius: 20px; background: linear-gradient(145deg, rgba(26, 43, 82, 0.4), rgba(10, 20, 40, 0.8)); border: 1px solid rgba(14, 165, 233, 0.2); box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);">
+                    <h3
+                        style="font-size: 2rem; margin-bottom: 20px; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;">
+                        Putluru Om Sai Nandan Reddy</h3>
+                    <p class="info-intro"
+                        style="font-size: 1.1rem; max-width: 600px; margin: 0 auto 40px auto; color: var(--text-secondary); line-height: 1.8;">
+                        Data Analytics enthusiast and Computer Science student from Lovely Professional University with
+                        a passion for transforming data into actionable insights. Ready to collaborate and tackle
+                        complex data challenges!
+                    </p>
+
+                    <div
+                        style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-bottom: 40px;">
+                        <div class="info-card"
+                            style="flex: 1; min-width: 250px; background: rgba(255,255,255,0.03); padding: 25px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.05); transition: transform 0.3s, border-color 0.3s; display: flex; flex-direction: column; align-items: center; text-align: center;"
+                            onmouseover="this.style.transform='translateY(-5px)'; this.style.borderColor='var(--secondary-color)'"
+                            onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(255,255,255,0.05)'">
+                            <i class="fas fa-map-marker-alt"
+                                style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: 15px;"></i>
+                            <h4 style="font-size: 1.2rem; margin-bottom: 5px; color: var(--text-primary);">Location</h4>
+                            <p style="color: var(--text-secondary);">Hyderabad, India</p>
+                        </div>
+
+                        <div class="info-card"
+                            style="flex: 1; min-width: 250px; background: rgba(255,255,255,0.03); padding: 25px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.05); transition: transform 0.3s, border-color 0.3s; display: flex; flex-direction: column; align-items: center; text-align: center;"
+                            onmouseover="this.style.transform='translateY(-5px)'; this.style.borderColor='var(--secondary-color)'"
+                            onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(255,255,255,0.05)'">
+                            <i class="fas fa-envelope"
+                                style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: 15px;"></i>
+                            <h4 style="font-size: 1.2rem; margin-bottom: 5px; color: var(--text-primary);">Email</h4>
+                            <a href="mailto:omsainandanreddy@gmail.com"
+                                style="color: var(--text-secondary); text-decoration: none; transition: color 0.3s;"
+                                onmouseover="this.style.color='var(--secondary-color)'"
+                                onmouseout="this.style.color='var(--text-secondary)'">omsainandanreddy@gmail.com</a>
+                        </div>
+
+                        <div class="info-card"
+                            style="flex: 1; min-width: 250px; background: rgba(255,255,255,0.03); padding: 25px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.05); transition: transform 0.3s, border-color 0.3s; display: flex; flex-direction: column; align-items: center; text-align: center;"
+                            onmouseover="this.style.transform='translateY(-5px)'; this.style.borderColor='var(--secondary-color)'"
+                            onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(255,255,255,0.05)'">
+                            <i class="fas fa-phone-alt"
+                                style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: 15px;"></i>
+                            <h4 style="font-size: 1.2rem; margin-bottom: 5px; color: var(--text-primary);">Phone</h4>
+                            <a href="tel:+919505347186"
+                                style="color: var(--text-secondary); text-decoration: none; transition: color 0.3s;"
+                                onmouseover="this.style.color='var(--secondary-color)'"
+                                onmouseout="this.style.color='var(--text-secondary)'">+91 9505347186</a>
+                        </div>
+                    </div>
+
+                    <div class="social-shortcuts"
+                        style="display: flex; justify-content: center; gap: 20px; align-items: center; margin-top: 20px;">
+                        <a href="https://github.com/omsainandanreddy14" target="_blank" class="social-icon"
+                            title="GitHub"
+                            style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: var(--dark-bg); color: var(--text-primary); text-decoration: none; font-size: 1.5rem; transition: transform 0.3s, background 0.3s;"
+                            onmouseover="this.style.transform='translateY(-5px)'; this.style.background='var(--primary-color)'"
+                            onmouseout="this.style.transform='translateY(0)'; this.style.background='var(--dark-bg)'">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/omsai-nandan-reddy14/" target="_blank" class="social-icon"
+                            title="LinkedIn"
+                            style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: var(--dark-bg); color: var(--text-primary); text-decoration: none; font-size: 1.5rem; transition: transform 0.3s, background 0.3s;"
+                            onmouseover="this.style.transform='translateY(-5px)'; this.style.background='var(--primary-color)'"
+                            onmouseout="this.style.transform='translateY(0)'; this.style.background='var(--dark-bg)'">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:omsainandanreddy@gmail.com" class="social-icon" title="Email"
+                            style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: var(--dark-bg); color: var(--text-primary); text-decoration: none; font-size: 1.5rem; transition: transform 0.3s, background 0.3s;"
+                            onmouseover="this.style.transform='translateY(-5px)'; this.style.background='var(--primary-color)'"
+                            onmouseout="this.style.transform='translateY(0)'; this.style.background='var(--dark-bg)'">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" class="social-icon" title="Twitter"
+                            style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: var(--dark-bg); color: var(--text-primary); text-decoration: none; font-size: 1.5rem; transition: transform 0.3s, background 0.3s;"
+                            onmouseover="this.style.transform='translateY(-5px)'; this.style.background='var(--primary-color)'"
+                            onmouseout="this.style.transform='translateY(0)'; this.style.background='var(--dark-bg)'">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="section-container">
+            <p>&copy; 2026 Omsai Nandan Reddy | Data Analyst & Computer Science Professional</p>
+            <p class="footer-subtitle">Crafted with <i class="fas fa-heart"></i> and passion for data</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
