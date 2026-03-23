@@ -63,49 +63,55 @@ function typeAnimation() {
 
 typeAnimation();
 
-// ==================== CONTACT FORM HANDLER ====================
-const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-  contactForm.addEventListener('submit', function (e) {
+// ==================== CONTACT FORM HANDLER (Formspree) ====================
+(function () {
+  var form = document.getElementById('contactForm');
+  if (!form) return;
+
+  form.addEventListener('submit', function (e) {
     e.preventDefault();
 
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const subject = document.getElementById('subject').value;
-    const message = document.getElementById('message').value;
+    var btn = document.getElementById('contactSubmitBtn');
+    var status = document.getElementById('formStatus');
 
-    const statusEl = document.getElementById('contactStatus');
-    const btn = contactForm.querySelector('button');
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+    status.className = 'cp-status';
+    status.style.display = 'none';
 
-    // Create mailto link with form data
-    const mailtoLink = `mailto:omsainandanreddy@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
-
-    // UX: show feedback immediately before the browser opens the email client
-    if (statusEl) {
-      statusEl.textContent = 'Opening your email client with your message...';
-      statusEl.classList.add('show');
-    }
-    if (btn) {
-      btn.disabled = true;
-      btn.style.opacity = '0.85';
-    }
-
-    // Use a short delay so the user can see the status update
-    setTimeout(() => {
-      window.location.href = mailtoLink;
-    }, 250);
-
-    // Let the user send the email from their email client.
-    // (When using `mailto:`, we can't guarantee the email was actually delivered.)
-    setTimeout(() => {
-      contactForm.reset();
-      if (btn) {
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    })
+      .then(function (r) {
+        if (r.ok) {
+          status.className = 'cp-status success';
+          status.style.display = 'block';
+          status.innerHTML =
+            '<i class="fas fa-check-circle" style="margin-right:8px;font-size:1.1rem;"></i>' +
+            "Message sent successfully! I'll get back to you soon 🎉";
+          form.reset();
+          btn.innerHTML = '<i class="fas fa-check"></i> Sent!';
+          setTimeout(function () {
+            btn.disabled = false;
+            btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+          }, 4500);
+        } else {
+          throw new Error('Server error');
+        }
+      })
+      .catch(function () {
+        status.className = 'cp-status error';
+        status.style.display = 'block';
+        status.innerHTML =
+          '<i class="fas fa-exclamation-triangle" style="margin-right:8px;"></i>' +
+          'Oops! Something went wrong. Please try again.';
         btn.disabled = false;
-        btn.style.opacity = '';
-      }
-    }, 1500);
+        btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+      });
   });
-}
+})();
 
 // ==================== MOBILE MENU TOGGLE ====================
 const hamburger = document.getElementById('hamburger');
@@ -159,8 +165,10 @@ const header = document.querySelector('.header');
 window.addEventListener('scroll', () => {
   if (window.scrollY > 50) {
     header.style.boxShadow = '0 5px 30px rgba(14, 165, 233, 0.2)';
+    header.classList.add('scrolled');
   } else {
     header.style.boxShadow = 'none';
+    header.classList.remove('scrolled');
   }
 });
 
@@ -231,7 +239,6 @@ window.addEventListener('scroll', () => {
 
   sections.forEach(section => {
     const sectionTop = section.offsetTop;
-    const sectionHeight = section.clientHeight;
     if (pageYOffset >= sectionTop - 200) {
       current = section.getAttribute('id');
     }
@@ -240,12 +247,27 @@ window.addEventListener('scroll', () => {
   navLinkItems.forEach(link => {
     link.classList.remove('active');
     if (link.getAttribute('href').slice(1) === current) {
-      link.style.color = 'rgb(56, 189, 248)';
-    } else {
-      link.style.color = '';
+      link.classList.add('active');
     }
   });
 });
+
+// ==================== SKILL BAR ANIMATION ====================
+const skillObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const bars = entry.target.querySelectorAll('.skill-bar-fill');
+      bars.forEach(bar => {
+        const pct = bar.getAttribute('data-pct');
+        bar.style.width = pct + '%';
+      });
+      skillObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.2 });
+
+const skillsSection = document.querySelector('.skills-section');
+if (skillsSection) skillObserver.observe(skillsSection);
 
 // ==================== CONSOLE MESSAGE ====================
 console.log('%cWelcome to Putluru Om Sai Nandan Reddy\'s Portfolio!', 'font-size: 20px; color: #0ea5e9; font-weight: bold;');
