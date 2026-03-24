@@ -1,34 +1,51 @@
-// ==================== PARTICLE GENERATION ====================
-function createParticles() {
-  const container = document.getElementById('particleContainer');
-  if (!container) return;
-
-  const particleCount = 30;
-
-  for (let i = 0; i < particleCount; i++) {
-    const particle = document.createElement('div');
-    particle.classList.add('particle');
-
-    const randomX = Math.random() * window.innerWidth;
-    const randomDelay = Math.random() * 10;
-    const randomDuration = 15 + Math.random() * 10;
-    const randomOpacity = 0.3 + Math.random() * 0.5;
-
-    particle.style.left = randomX + 'px';
-    particle.style.bottom = '-10px';
-    particle.style.animationDelay = randomDelay + 's';
-    particle.style.animationDuration = randomDuration + 's';
-    particle.style.opacity = randomOpacity;
-    particle.style.width = (1 + Math.random() * 3) + 'px';
-    particle.style.height = particle.style.width;
-    particle.style.boxShadow = `0 0 ${5 + Math.random() * 10}px rgba(56, 189, 248, 0.8)`;
-
-    container.appendChild(particle);
-  }
+// ==================== PARTICLE GENERATION (tsParticles) ====================
+if (typeof tsParticles !== 'undefined') {
+  tsParticles.load("particleContainer", {
+    fpsLimit: 60,
+    interactivity: {
+      detectsOn: "window",
+      events: {
+        onClick: { enable: true, mode: "push" },
+        onHover: { enable: true, mode: "grab", parallax: { enable: true, force: 60, smooth: 10 } },
+        resize: true
+      },
+      modes: {
+        push: { quantity: 4 },
+        grab: { distance: 200, links: { opacity: 0.8, color: "#38bdf8" } }
+      }
+    },
+    particles: {
+      color: { value: "#0ea5e9" },
+      links: {
+        color: "#38bdf8",
+        distance: 150,
+        enable: true,
+        opacity: 0.4,
+        width: 1
+      },
+      collisions: { enable: false },
+      move: {
+        direction: "none",
+        enable: true,
+        outModes: { default: "bounce" },
+        random: true,
+        speed: 1.5,
+        straight: false
+      },
+      number: { density: { enable: true, area: 800 }, value: 80 },
+      opacity: {
+        value: 0.6,
+        animation: { enable: true, speed: 1, minimumValue: 0.1 }
+      },
+      shape: { type: "circle" },
+      size: {
+        value: { min: 1, max: 3 },
+        animation: { enable: true, speed: 2, minimumValue: 0.5 }
+      }
+    },
+    detectRetina: true
+  });
 }
-
-// Create particles on page load
-createParticles();
 
 // ==================== TYPING ANIMATION ====================
 const typingTexts = ["Impact-Driven Data Analyst", "Solution-Oriented Thinker", "Machine Learning Enthusiast"];
@@ -268,6 +285,7 @@ const skillObserver = new IntersectionObserver((entries) => {
 
 const skillsSection = document.querySelector('.skills-section');
 if (skillsSection) skillObserver.observe(skillsSection);
+
 
 // ==================== CONSOLE MESSAGE ====================
 console.log('%cWelcome to Putluru Om Sai Nandan Reddy\'s Portfolio!', 'font-size: 20px; color: #0ea5e9; font-weight: bold;');

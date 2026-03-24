@@ -51,131 +51,14 @@
                     <li><a href="#certificates" class="nav-link">Certificates</a></li>
                     <li><a href="#achievements" class="nav-link">Achievements</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
+
                 </ul>
             </div>
         </nav>
     </header>
 
-    <style>
-        body {
-            background-color: #020617 !important;
-            background-image:
-                radial-gradient(circle at 15% 50%, rgba(14, 165, 233, 0.08) 0%, transparent 50%),
-                radial-gradient(circle at 85% 30%, rgba(56, 189, 248, 0.06) 0%, transparent 50%),
-                linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px) !important;
-            background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px !important;
-            background-attachment: fixed !important;
-        }
-
-        .project-card {
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
-        }
-
-        .project-card:hover {
-            transform: translateY(-8px) scale(1.02) !important;
-            box-shadow: 0 20px 40px rgba(14, 165, 233, 0.2) !important;
-        }
-
-        .info-card {
-            transition: all 0.4s ease !important;
-        }
-
-        .info-card:hover {
-            transform: translateY(-8px) scale(1.03) !important;
-            box-shadow: 0 15px 30px rgba(14, 165, 233, 0.2) !important;
-            border-color: rgba(56, 189, 248, 0.6) !important;
-        }
-
-        @keyframes gradientBG {
-            0% {
-                background-position: 0% 50%;
-            }
-
-            50% {
-                background-position: 100% 50%;
-            }
-
-            100% {
-                background-position: 0% 50%;
-            }
-        }
-
-        @keyframes gradientText {
-            0% {
-                background-position: 0% 50%;
-            }
-
-            50% {
-                background-position: 100% 50%;
-            }
-
-            100% {
-                background-position: 0% 50%;
-            }
-        }
-
-        @keyframes pulseGlow {
-            0% {
-                box-shadow: 0 0 0 0 rgba(14, 165, 233, 0.4);
-            }
-
-            70% {
-                box-shadow: 0 0 0 10px rgba(14, 165, 233, 0);
-            }
-
-            100% {
-                box-shadow: 0 0 0 0 rgba(14, 165, 233, 0);
-            }
-        }
-
-        @keyframes floatParticles {
-            0% {
-                transform: translateY(100vh) scale(0);
-                opacity: 0;
-            }
-
-            10% {
-                opacity: 1;
-            }
-
-            90% {
-                opacity: 1;
-            }
-
-            100% {
-                transform: translateY(-100px) scale(1.5);
-                opacity: 0;
-            }
-        }
-
-        @keyframes textFloat {
-
-            0%,
-            100% {
-                transform: translateY(0) scale(1);
-                text-shadow: 0 5px 15px rgba(0, 210, 255, 0.3);
-            }
-
-            50% {
-                transform: translateY(-8px) scale(1.02);
-                text-shadow: 0 15px 25px rgba(255, 138, 0, 0.5);
-            }
-        }
-
-        .particle {
-            position: absolute;
-            border-radius: 50%;
-            background: rgba(14, 165, 233, 0.6);
-            animation: floatParticles linear infinite;
-        }
-    </style>
     <section id="home" class="hero-section"
         style="position: relative; overflow: hidden; background: linear-gradient(-45deg, rgba(2, 6, 23, 1), rgba(15, 23, 42, 1), rgba(14, 165, 233, 0.1), rgba(30, 58, 138, 0.2)); background-size: 400% 400%; animation: gradientBG 15s ease infinite;">
-        <!-- Particle Container -->
-        <div id="particleContainer"
-            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none;">
-        </div>
 
         <div class="home-container" style="position: relative; z-index: 1;">
             <div class="profile-section">
@@ -272,54 +155,65 @@
                 <div class="summary-cards-col"
                     style="flex: 0 0 350px; width: 100%; min-width: 300px; display: flex; flex-direction: column; gap: 20px;">
                     <div
-                        style="background: rgba(10, 20, 40, 0.4); border: 1px solid rgba(14, 165, 233, 0.2); padding: 30px 20px; border-radius: 20px;">
+                        style="background: rgba(10, 20, 40, 0.4); border: 1px solid rgba(14, 165, 233, 0.2); padding: 20px 15px; border-radius: 20px;">
                         <h3
-                            style="font-size: 1.3rem; margin-bottom: 25px; text-align: center; color: var(--text-primary);">
+                            style="font-size: 1.2rem; margin-bottom: 15px; text-align: center; color: var(--text-primary);">
                             Core Strengths</h3>
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-                            <div style="background: rgba(255, 255, 255, 0.03); padding: 20px 10px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.05); text-align: center; transition: all 0.3s;"
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                            <div style="background: rgba(255, 255, 255, 0.03); padding: 15px 10px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.05); text-align: center; transition: all 0.3s;"
                                 onmouseover="this.style.transform='translateY(-5px)'; this.style.borderColor='var(--secondary-color)'; this.style.background='rgba(14, 165, 233, 0.1)'"
                                 onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(255, 255, 255, 0.05)'; this.style.background='rgba(255, 255, 255, 0.03)'">
                                 <i class="fas fa-chart-line"
-                                    style="font-size: 2rem; color: var(--primary-color); margin-bottom: 10px; display: block;"></i>
-                                <span style="font-size: 0.95rem; font-weight: 600; color: var(--text-primary);">Data
+                                    style="font-size: 1.6rem; color: var(--primary-color); margin-bottom: 8px; display: block;"></i>
+                                <span style="font-size: 0.9rem; font-weight: 600; color: var(--text-primary);">Data
                                     Analysis</span>
                             </div>
-                            <div style="background: rgba(255, 255, 255, 0.03); padding: 20px 10px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.05); text-align: center; transition: all 0.3s;"
+                            <div style="background: rgba(255, 255, 255, 0.03); padding: 15px 10px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.05); text-align: center; transition: all 0.3s;"
                                 onmouseover="this.style.transform='translateY(-5px)'; this.style.borderColor='var(--secondary-color)'; this.style.background='rgba(14, 165, 233, 0.1)'"
                                 onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(255, 255, 255, 0.05)'; this.style.background='rgba(255, 255, 255, 0.03)'">
                                 <i class="fas fa-brain"
-                                    style="font-size: 2rem; color: var(--primary-color); margin-bottom: 10px; display: block;"></i>
-                                <span style="font-size: 0.95rem; font-weight: 600; color: var(--text-primary);">Machine
+                                    style="font-size: 1.6rem; color: var(--primary-color); margin-bottom: 8px; display: block;"></i>
+                                <span style="font-size: 0.9rem; font-weight: 600; color: var(--text-primary);">Machine
                                     Learning</span>
                             </div>
-                            <div style="background: rgba(255, 255, 255, 0.03); padding: 20px 10px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.05); text-align: center; transition: all 0.3s;"
+                            <div style="background: rgba(255, 255, 255, 0.03); padding: 15px 10px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.05); text-align: center; transition: all 0.3s;"
                                 onmouseover="this.style.transform='translateY(-5px)'; this.style.borderColor='var(--secondary-color)'; this.style.background='rgba(14, 165, 233, 0.1)'"
                                 onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(255, 255, 255, 0.05)'; this.style.background='rgba(255, 255, 255, 0.03)'">
                                 <i class="fas fa-chart-pie"
-                                    style="font-size: 2rem; color: var(--primary-color); margin-bottom: 10px; display: block;"></i>
+                                    style="font-size: 1.6rem; color: var(--primary-color); margin-bottom: 8px; display: block;"></i>
                                 <span
-                                    style="font-size: 0.95rem; font-weight: 600; color: var(--text-primary);">Visualization</span>
+                                    style="font-size: 0.9rem; font-weight: 600; color: var(--text-primary);">Visualization</span>
                             </div>
-                            <div style="background: rgba(255, 255, 255, 0.03); padding: 20px 10px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.05); text-align: center; transition: all 0.3s;"
+                            <div style="background: rgba(255, 255, 255, 0.03); padding: 15px 10px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.05); text-align: center; transition: all 0.3s;"
                                 onmouseover="this.style.transform='translateY(-5px)'; this.style.borderColor='var(--secondary-color)'; this.style.background='rgba(14, 165, 233, 0.1)'"
                                 onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(255, 255, 255, 0.05)'; this.style.background='rgba(255, 255, 255, 0.03)'">
                                 <i class="fas fa-lightbulb"
-                                    style="font-size: 2rem; color: var(--primary-color); margin-bottom: 10px; display: block;"></i>
-                                <span style="font-size: 0.95rem; font-weight: 600; color: var(--text-primary);">Problem
+                                    style="font-size: 1.6rem; color: var(--primary-color); margin-bottom: 8px; display: block;"></i>
+                                <span style="font-size: 0.9rem; font-weight: 600; color: var(--text-primary);">Problem
                                     Solving</span>
                             </div>
                         </div>
                     </div>
                     <div
-                        style="background: linear-gradient(135deg, rgba(14, 165, 233, 0.1), rgba(56, 189, 248, 0.05)); padding: 25px; border-radius: 15px; border-left: 4px solid var(--primary-color);">
-                        <h3 style="color: var(--secondary-color); margin-bottom: 10px; font-size: 1.2rem;"><i
+                        style="background: linear-gradient(135deg, rgba(14, 165, 233, 0.1), rgba(56, 189, 248, 0.05)); padding: 15px 20px; border-radius: 15px; border-left: 4px solid var(--primary-color);">
+                        <h3 style="color: var(--secondary-color); margin-bottom: 5px; font-size: 1.1rem;"><i
                                 class="fas fa-bullseye" style="margin-right: 10px;"></i>Career Objective</h3>
-                        <p style="color: var(--text-secondary); margin: 0; font-size: 1.05rem; line-height: 1.6;">
+                        <p style="color: var(--text-secondary); margin: 0; font-size: 0.92rem; line-height: 1.5;">
                             To build a career as a Data Analyst where I can leverage data-driven insights, analytical
                             skills, and visualization techniques to solve real-world business problems and contribute to
                             organizational growth.
                         </p>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 5px;">
+                        <div style="background: rgba(10, 20, 40, 0.4); padding: 20px 10px; border-radius: 15px; border: 1px solid rgba(14, 165, 233, 0.2); text-align: center; transition: all 0.3s;" class="stat info-card">
+                            <h3 style="font-size: 2.2rem; color: #38bdf8; font-weight: 800; margin-bottom: 5px;">7.8</h3>
+                            <span style="font-size: 0.95rem; color: var(--text-secondary); font-weight: 600;">CGPA</span>
+                        </div>
+                        <div style="background: rgba(10, 20, 40, 0.4); padding: 20px 10px; border-radius: 15px; border: 1px solid rgba(14, 165, 233, 0.2); text-align: center; transition: all 0.3s;" class="stat info-card">
+                            <h3 style="font-size: 2.2rem; color: #38bdf8; font-weight: 800; margin-bottom: 5px;">5+</h3>
+                            <span style="font-size: 0.95rem; color: var(--text-secondary); font-weight: 600;">Certifications</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -578,6 +472,39 @@
                     </div>
                 </div>
 
+                <!-- Card 5: Soft Skills -->
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-users"></i></div>
+                    <h3>Soft Skills</h3>
+                    <div class="skill-item">
+                        <div class="skill-item-header"><span class="skill-name">Problem-Solving</span><span
+                                class="skill-pct">95%</span></div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-pct="95"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-item-header"><span class="skill-name">Analytical Thinking</span><span
+                                class="skill-pct">90%</span></div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-pct="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-item-header"><span class="skill-name">Logical Thinking</span><span
+                                class="skill-pct">88%</span></div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-pct="88"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-item-header"><span class="skill-name">Communication</span><span
+                                class="skill-pct">85%</span></div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-pct="85"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -783,7 +710,7 @@
                         </div>
                         <h4>Master Generative AI & Tools</h4>
                         <p>Udemy</p>
-                        <a href="https://e2.udemymail.com/ls/click?upn=u001.fZrgtsiEFAuEd5Epw844o-2FRovDks96VP1VztnlU5HKAR2AKcj84D6tEtUmZlld4-2FypSjNns4dFP9LYm7G8x0-2BNwyIJriPvxbIrwWXdQb4LXjfndpqR-2BGcJ8yBVyWniuT57Srqaw7yHfmFyTDuPZ2TNDkBIdCgUtbb1IG0ePQPUzwwp3oERseHCYff-2BcjallH6Ib10OspwDJFJKbGoEOphw-3D-3DmQFE_WJ7MuUtLxXd6GGt07NHuZ27ervwuSy0bMkmofxoeB6u6hRW64HVqIwj9nSOB6WPUcNWLq8o1THChb9NIN2uUzbulZf5bv8vhcoLY0JyuDdVnBQ9wjEG42bUkXfp9lFFDmTvlemVyxQ5lE6Fm2kgQU3KreDI700TQvKZWJuV14GAi8rWqDHj9YbNI0UWBvLgSnxWjpOCSz4lYaO8pswQQu7nAJQJHoIAQSsLuAwsSldkTyYvGz-2FBrsn5JuG7Gp55-2Fz9zX5phBfZHAZfC4ou0LMGnxc5Ey0ksrKogWTL2FDphtG5ERzpzEW60Rr-2FM3b70y7XJDAiGHWuyAlaE8kzzcg-3D-3D"
+                        <a href="https://drive.google.com/drive/folders/1eso8qGCC0bRNGmqi6tnePwwtLVOBDeR2?usp=drive_link"
                             target="_blank" class="cert-link">
                             <i class="fas fa-external-link-alt"></i> View Certificate
                         </a>
@@ -808,6 +735,18 @@
                         <h4>Responsive Web Design</h4>
                         <p>FreeCodeCamp</p>
                         <a href="https://www.freecodecamp.org/certification/fcc1fb04b39-03a9-4d40-a673-ef57db5725cb/responsive-web-design"
+                            target="_blank" class="cert-link">
+                            <i class="fas fa-external-link-alt"></i> View Certificate
+                        </a>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h4>Data Analytics Job Simulation</h4>
+                        <p>Deloitte</p>
+                        <a href="https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_69102990a3fe2df04782f259_1763556170144_completion_certificate.pdf"
                             target="_blank" class="cert-link">
                             <i class="fas fa-external-link-alt"></i> View Certificate
                         </a>
@@ -1027,6 +966,8 @@
         </div>
     </footer>
 
+    <!-- tsParticles -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 
