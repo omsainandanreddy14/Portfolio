@@ -22,9 +22,6 @@
     <div class="accent-light accent-light-3"></div>
 
     <!-- Nebula-like glowing orbs -->
-    <div class="nebula nebula-1"></div>
-    <div class="nebula nebula-2"></div>
-
     <!-- Particle background -->
     <div class="particle-bg" id="particleContainer"></div>
 
@@ -51,7 +48,6 @@
                     <li><a href="#certificates" class="nav-link">Certificates</a></li>
                     <li><a href="#achievements" class="nav-link">Achievements</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
-
                 </ul>
             </div>
         </nav>
@@ -131,8 +127,8 @@
     <section id="summary" class="about-section">
         <div class="section-container">
             <h2 class="section-title">About Me</h2>
-            <div class="about-content" style="display: flex; flex-wrap: wrap; gap: 40px; align-items: stretch;">
-                <div class="summary-text-col" style="flex: 1; min-width: 300px; display: flex; flex-direction: column;">
+            <div class="about-content">
+                <div class="summary-text-col">
                     <p class="about-text">
                         I am currently pursuing B.Tech in Computer Science and Engineering at <strong>Lovely
                             Professional University</strong>. My passion lies in transforming raw data into meaningful
@@ -145,74 +141,65 @@
                         and building intelligent applications that solve real-world problems. I believe that data
                         storytelling is as important as data analysis—presenting insights in a way that drives action.
                     </p>
-                    <p class="about-text" style="margin-bottom: 25px;">
+                    <p class="about-text">
                         With hands-on experience in <strong>Python, Power BI, SQL, OpenCV,</strong> and data science
                         libraries including <strong>Pandas, NumPy, Matplotlib, Seaborn, and Scikit-learn</strong>, I'm
                         equipped to tackle complex analytical challenges and communicate findings effectively.
                     </p>
-                </div> <!-- end summary-text-col -->
+                </div>
 
-                <div class="summary-cards-col"
-                    style="flex: 0 0 350px; width: 100%; min-width: 300px; display: flex; flex-direction: column; gap: 20px;">
-                    <div
-                        style="background: rgba(10, 20, 40, 0.4); border: 1px solid rgba(14, 165, 233, 0.2); padding: 20px 15px; border-radius: 20px;">
-                        <h3
-                            style="font-size: 1.2rem; margin-bottom: 15px; text-align: center; color: var(--text-primary);">
-                            Core Strengths</h3>
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
-                            <div style="background: rgba(255, 255, 255, 0.03); padding: 15px 10px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.05); text-align: center; transition: all 0.3s;"
-                                onmouseover="this.style.transform='translateY(-5px)'; this.style.borderColor='var(--secondary-color)'; this.style.background='rgba(14, 165, 233, 0.1)'"
+                <div class="about-bottom-cards-grid">
+                    <div style="background: rgba(10, 20, 40, 0.5); border: 1px solid rgba(14, 165, 233, 0.2); padding: 22px 18px; border-radius: 18px; display: flex; flex-direction: column; justify-content: center;">
+                        <h3 style="font-size: 1.15rem; margin-bottom: 15px; text-align: center; color: var(--text-primary);">
+                            Core Strengths
+                        </h3>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                            <div style="background: rgba(255, 255, 255, 0.03); padding: 12px 8px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.05); text-align: center; transition: all 0.3s;"
+                                onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='var(--secondary-color)'; this.style.background='rgba(14, 165, 233, 0.1)'"
                                 onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(255, 255, 255, 0.05)'; this.style.background='rgba(255, 255, 255, 0.03)'">
-                                <i class="fas fa-chart-line"
-                                    style="font-size: 1.6rem; color: var(--primary-color); margin-bottom: 8px; display: block;"></i>
-                                <span style="font-size: 0.9rem; font-weight: 600; color: var(--text-primary);">Data
-                                    Analysis</span>
+                                <i class="fas fa-chart-line" style="font-size: 1.4rem; color: var(--primary-color); margin-bottom: 6px; display: block;"></i>
+                                <span style="font-size: 0.85rem; font-weight: 600; color: var(--text-primary);">Data Analysis</span>
                             </div>
-                            <div style="background: rgba(255, 255, 255, 0.03); padding: 15px 10px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.05); text-align: center; transition: all 0.3s;"
-                                onmouseover="this.style.transform='translateY(-5px)'; this.style.borderColor='var(--secondary-color)'; this.style.background='rgba(14, 165, 233, 0.1)'"
+                            <div style="background: rgba(255, 255, 255, 0.03); padding: 12px 8px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.05); text-align: center; transition: all 0.3s;"
+                                onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='var(--secondary-color)'; this.style.background='rgba(14, 165, 233, 0.1)'"
                                 onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(255, 255, 255, 0.05)'; this.style.background='rgba(255, 255, 255, 0.03)'">
-                                <i class="fas fa-brain"
-                                    style="font-size: 1.6rem; color: var(--primary-color); margin-bottom: 8px; display: block;"></i>
-                                <span style="font-size: 0.9rem; font-weight: 600; color: var(--text-primary);">Machine
-                                    Learning</span>
+                                <i class="fas fa-brain" style="font-size: 1.4rem; color: var(--primary-color); margin-bottom: 6px; display: block;"></i>
+                                <span style="font-size: 0.85rem; font-weight: 600; color: var(--text-primary);">ML & AI</span>
                             </div>
-                            <div style="background: rgba(255, 255, 255, 0.03); padding: 15px 10px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.05); text-align: center; transition: all 0.3s;"
-                                onmouseover="this.style.transform='translateY(-5px)'; this.style.borderColor='var(--secondary-color)'; this.style.background='rgba(14, 165, 233, 0.1)'"
+                            <div style="background: rgba(255, 255, 255, 0.03); padding: 12px 8px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.05); text-align: center; transition: all 0.3s;"
+                                onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='var(--secondary-color)'; this.style.background='rgba(14, 165, 233, 0.1)'"
                                 onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(255, 255, 255, 0.05)'; this.style.background='rgba(255, 255, 255, 0.03)'">
-                                <i class="fas fa-chart-pie"
-                                    style="font-size: 1.6rem; color: var(--primary-color); margin-bottom: 8px; display: block;"></i>
-                                <span
-                                    style="font-size: 0.9rem; font-weight: 600; color: var(--text-primary);">Visualization</span>
+                                <i class="fas fa-chart-pie" style="font-size: 1.4rem; color: var(--primary-color); margin-bottom: 6px; display: block;"></i>
+                                <span style="font-size: 0.85rem; font-weight: 600; color: var(--text-primary);">Visualization</span>
                             </div>
-                            <div style="background: rgba(255, 255, 255, 0.03); padding: 15px 10px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.05); text-align: center; transition: all 0.3s;"
-                                onmouseover="this.style.transform='translateY(-5px)'; this.style.borderColor='var(--secondary-color)'; this.style.background='rgba(14, 165, 233, 0.1)'"
+                            <div style="background: rgba(255, 255, 255, 0.03); padding: 12px 8px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.05); text-align: center; transition: all 0.3s;"
+                                onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='var(--secondary-color)'; this.style.background='rgba(14, 165, 233, 0.1)'"
                                 onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(255, 255, 255, 0.05)'; this.style.background='rgba(255, 255, 255, 0.03)'">
-                                <i class="fas fa-lightbulb"
-                                    style="font-size: 1.6rem; color: var(--primary-color); margin-bottom: 8px; display: block;"></i>
-                                <span style="font-size: 0.9rem; font-weight: 600; color: var(--text-primary);">Problem
-                                    Solving</span>
+                                <i class="fas fa-lightbulb" style="font-size: 1.4rem; color: var(--primary-color); margin-bottom: 6px; display: block;"></i>
+                                <span style="font-size: 0.85rem; font-weight: 600; color: var(--text-primary);">Problem Solving</span>
                             </div>
                         </div>
                     </div>
-                    <div
-                        style="background: linear-gradient(135deg, rgba(14, 165, 233, 0.1), rgba(56, 189, 248, 0.05)); padding: 15px 20px; border-radius: 15px; border-left: 4px solid var(--primary-color);">
-                        <h3 style="color: var(--secondary-color); margin-bottom: 5px; font-size: 1.1rem;"><i
-                                class="fas fa-bullseye" style="margin-right: 10px;"></i>Career Objective</h3>
-                        <p style="color: var(--text-secondary); margin: 0; font-size: 0.92rem; line-height: 1.5;">
+
+                    <div style="background: linear-gradient(135deg, rgba(14, 165, 233, 0.12), rgba(56, 189, 248, 0.05)); padding: 22px 20px; border-radius: 18px; border-left: 4px solid var(--primary-color); display: flex; flex-direction: column; justify-content: center;">
+                        <h3 style="color: var(--secondary-color); margin-bottom: 10px; font-size: 1.15rem;">
+                            <i class="fas fa-bullseye" style="margin-right: 8px;"></i>Career Objective
+                        </h3>
+                        <p style="color: var(--text-secondary); margin: 0; font-size: 0.92rem; line-height: 1.6;">
                             To build a career as a Data Analyst where I can leverage data-driven insights, analytical
                             skills, and visualization techniques to solve real-world business problems and contribute to
                             organizational growth.
                         </p>
                     </div>
 
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 5px;">
-                        <div style="background: rgba(10, 20, 40, 0.4); padding: 20px 10px; border-radius: 15px; border: 1px solid rgba(14, 165, 233, 0.2); text-align: center; transition: all 0.3s;" class="stat info-card">
+                    <div class="about-stats">
+                        <div style="background: rgba(10, 20, 40, 0.5); padding: 22px 10px; border-radius: 18px; border: 1px solid rgba(14, 165, 233, 0.2); text-align: center; transition: all 0.3s; display: flex; flex-direction: column; justify-content: center;" class="stat info-card">
                             <h3 style="font-size: 2.2rem; color: #38bdf8; font-weight: 800; margin-bottom: 5px;">7.8</h3>
-                            <span style="font-size: 0.95rem; color: var(--text-secondary); font-weight: 600;">CGPA</span>
+                            <span style="font-size: 0.9rem; color: var(--text-secondary); font-weight: 600;">CGPA</span>
                         </div>
-                        <div style="background: rgba(10, 20, 40, 0.4); padding: 20px 10px; border-radius: 15px; border: 1px solid rgba(14, 165, 233, 0.2); text-align: center; transition: all 0.3s;" class="stat info-card">
+                        <div style="background: rgba(10, 20, 40, 0.5); padding: 22px 10px; border-radius: 18px; border: 1px solid rgba(14, 165, 233, 0.2); text-align: center; transition: all 0.3s; display: flex; flex-direction: column; justify-content: center;" class="stat info-card">
                             <h3 style="font-size: 2.2rem; color: #38bdf8; font-weight: 800; margin-bottom: 5px;">5+</h3>
-                            <span style="font-size: 0.95rem; color: var(--text-secondary); font-weight: 600;">Certifications</span>
+                            <span style="font-size: 0.9rem; color: var(--text-secondary); font-weight: 600;">Certifications</span>
                         </div>
                     </div>
                 </div>
@@ -297,31 +284,80 @@
 
     <section id="education" class="education-section">
         <div class="section-container">
-            <h2 class="section-title">Education & Academic Background</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content education-card">
-                        <h3>Lovely Professional University</h3>
-                        <p class="degree">B.Tech Computer Science and Engineering</p>
-                        <p class="meta">2022 - 2026 | CGPA: 7.8</p>
-                        <p>Specializing in Data Analytics and Software Development</p>
+            <h2 class="section-title">Education &amp; Academic Background</h2>
+            <div class="education-squares-grid">
+                <!-- 1. LPU Card -->
+                <div class="edu-square-card" onclick="this.classList.toggle('active')">
+                    <div>
+                        <div class="edu-square-header">
+                            <div class="edu-square-icon">
+                                <i class="fas fa-university"></i>
+                            </div>
+                            <span class="edu-square-year"><i class="far fa-calendar-alt" style="margin-right: 4px;"></i>2023 – 2027</span>
+                        </div>
+                        <h3 class="edu-square-title">Lovely Professional University</h3>
+                        <div class="edu-square-location">
+                            <i class="fas fa-map-marker-alt"></i> Phagwara, Punjab
+                        </div>
+                        <div class="edu-square-degree">
+                            Bachelor of Technology - Computer Science and Engineering
+                        </div>
+                        <div class="edu-square-score">
+                            Current CGPA: 7.8
+                        </div>
+                    </div>
+                    <div class="edu-square-desc">
+                        Specializing in Data Science
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content education-card">
-                        <h3>PGR Junior College</h3>
-                        <p class="degree">Intermediate (MPC)</p>
-                        <p class="meta">2021 - 2023 | Percentage: 96.3%</p>
+
+                <!-- 2. PGR Card -->
+                <div class="edu-square-card" onclick="this.classList.toggle('active')">
+                    <div>
+                        <div class="edu-square-header">
+                            <div class="edu-square-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <span class="edu-square-year"><i class="far fa-calendar-alt" style="margin-right: 4px;"></i>2021 – 2023</span>
+                        </div>
+                        <h3 class="edu-square-title">PGR Junior College</h3>
+                        <div class="edu-square-location">
+                            <i class="fas fa-map-marker-alt"></i> Hyderabad, Telangana
+                        </div>
+                        <div class="edu-square-degree">
+                            Intermediate
+                        </div>
+                        <div class="edu-square-score high">
+                            Percentage: 96.3%
+                        </div>
+                    </div>
+                    <div class="edu-square-desc">
+                        Mathematics, Physics &amp; Chemistry (MPC)
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content education-card">
-                        <h3>Indus EM High School</h3>
-                        <p class="degree">SSC (10th Standard)</p>
-                        <p class="meta">2020 - 2021 | Percentage: 96.6%</p>
+
+                <!-- 3. Indus Card -->
+                <div class="edu-square-card" onclick="this.classList.toggle('active')">
+                    <div>
+                        <div class="edu-square-header">
+                            <div class="edu-square-icon">
+                                <i class="fas fa-school"></i>
+                            </div>
+                            <span class="edu-square-year"><i class="far fa-calendar-alt" style="margin-right: 4px;"></i>2020 – 2021</span>
+                        </div>
+                        <h3 class="edu-square-title">Indus EM High School</h3>
+                        <div class="edu-square-location">
+                            <i class="fas fa-map-marker-alt"></i> Kurnool, Andhra Pradesh
+                        </div>
+                        <div class="edu-square-degree">
+                            Matriculation
+                        </div>
+                        <div class="edu-square-score high">
+                            Percentage: 96.6%
+                        </div>
+                    </div>
+                    <div class="edu-square-desc">
+                        Secondary School Certificate (SSC 10th Standard)
                     </div>
                 </div>
             </div>
@@ -338,172 +374,195 @@
 
                 <!-- Card 1: Programming -->
                 <div class="skill-card">
-                    <div class="skill-icon"><i class="fas fa-terminal"></i></div>
-                    <h3>Programming &amp; Query Languages</h3>
-                    <div class="skill-item">
-                        <div class="skill-item-header"><span class="skill-name">Python</span><span
-                                class="skill-pct">92%</span></div>
-                        <div class="skill-bar-track">
-                            <div class="skill-bar-fill" data-pct="92"></div>
-                        </div>
+                    <div class="skill-card-header">
+                        <div class="skill-icon"><i class="fas fa-terminal"></i></div>
+                        <h3>Programming &amp; Languages</h3>
                     </div>
-                    <div class="skill-item">
-                        <div class="skill-item-header"><span class="skill-name">SQL</span><span
-                                class="skill-pct">88%</span></div>
-                        <div class="skill-bar-track">
-                            <div class="skill-bar-fill" data-pct="88"></div>
+                    <div class="skill-chips-container">
+                        <div class="tech-chip">
+                            <div class="tech-chip-icon"><i class="fab fa-python"></i></div>
+                            <div class="tech-chip-details">
+                                <span class="tech-chip-name">Python</span>
+                                <span class="tech-chip-desc">Core &amp; Analytics</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-item-header"><span class="skill-name">C++</span><span
-                                class="skill-pct">75%</span></div>
-                        <div class="skill-bar-track">
-                            <div class="skill-bar-fill" data-pct="75"></div>
+                        <div class="tech-chip">
+                            <div class="tech-chip-icon"><i class="fas fa-database"></i></div>
+                            <div class="tech-chip-details">
+                                <span class="tech-chip-name">SQL</span>
+                                <span class="tech-chip-desc">Queries &amp; Joins</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-item-header"><span class="skill-name">Java</span><span
-                                class="skill-pct">68%</span></div>
-                        <div class="skill-bar-track">
-                            <div class="skill-bar-fill" data-pct="68"></div>
+                        <div class="tech-chip">
+                            <div class="tech-chip-icon"><i class="fas fa-code"></i></div>
+                            <div class="tech-chip-details">
+                                <span class="tech-chip-name">C++</span>
+                                <span class="tech-chip-desc">Data Structures</span>
+                            </div>
+                        </div>
+                        <div class="tech-chip">
+                            <div class="tech-chip-icon"><i class="fab fa-java"></i></div>
+                            <div class="tech-chip-details">
+                                <span class="tech-chip-name">Java</span>
+                                <span class="tech-chip-desc">OOP Fundamentals</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 2: Data Science -->
+                <!-- Card 2: Machine Learning Libraries -->
                 <div class="skill-card">
-                    <div class="skill-icon"><i class="fas fa-brain"></i></div>
-                    <h3>Data Science &amp; Machine Learning</h3>
-                    <div class="skill-item">
-                        <div class="skill-item-header"><span class="skill-name">Pandas / NumPy</span><span
-                                class="skill-pct">90%</span></div>
-                        <div class="skill-bar-track">
-                            <div class="skill-bar-fill" data-pct="90"></div>
-                        </div>
+                    <div class="skill-card-header">
+                        <div class="skill-icon"><i class="fas fa-brain"></i></div>
+                        <h3>Machine Learning &amp; AI</h3>
                     </div>
-                    <div class="skill-item">
-                        <div class="skill-item-header"><span class="skill-name">Scikit-learn</span><span
-                                class="skill-pct">82%</span></div>
-                        <div class="skill-bar-track">
-                            <div class="skill-bar-fill" data-pct="82"></div>
+                    <div class="skill-chips-container">
+                        <div class="tech-chip">
+                            <div class="tech-chip-icon"><i class="fas fa-cubes"></i></div>
+                            <div class="tech-chip-details">
+                                <span class="tech-chip-name">NumPy</span>
+                                <span class="tech-chip-desc">Numerical Computing</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-item-header"><span class="skill-name">Matplotlib / Seaborn</span><span
-                                class="skill-pct">87%</span></div>
-                        <div class="skill-bar-track">
-                            <div class="skill-bar-fill" data-pct="87"></div>
+                        <div class="tech-chip">
+                            <div class="tech-chip-icon"><i class="fas fa-table"></i></div>
+                            <div class="tech-chip-details">
+                                <span class="tech-chip-name">Pandas</span>
+                                <span class="tech-chip-desc">Data Wrangling</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-item-header"><span class="skill-name">OpenCV / MediaPipe</span><span
-                                class="skill-pct">72%</span></div>
-                        <div class="skill-bar-track">
-                            <div class="skill-bar-fill" data-pct="72"></div>
+                        <div class="tech-chip">
+                            <div class="tech-chip-icon"><i class="fas fa-chart-bar"></i></div>
+                            <div class="tech-chip-details">
+                                <span class="tech-chip-name">Matplotlib &amp; Seaborn</span>
+                                <span class="tech-chip-desc">Statistical Viz</span>
+                            </div>
+                        </div>
+                        <div class="tech-chip">
+                            <div class="tech-chip-icon"><i class="fas fa-robot"></i></div>
+                            <div class="tech-chip-details">
+                                <span class="tech-chip-name">Scikit-learn</span>
+                                <span class="tech-chip-desc">Predictive Models</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Card 3: BI Tools -->
                 <div class="skill-card">
-                    <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
-                    <h3>Analytics &amp; BI Tools</h3>
-                    <div class="skill-item">
-                        <div class="skill-item-header"><span class="skill-name">Power BI</span><span
-                                class="skill-pct">88%</span></div>
-                        <div class="skill-bar-track">
-                            <div class="skill-bar-fill" data-pct="88"></div>
-                        </div>
+                    <div class="skill-card-header">
+                        <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
+                        <h3>Analytics &amp; BI Tools</h3>
                     </div>
-                    <div class="skill-item">
-                        <div class="skill-item-header"><span class="skill-name">Excel</span><span
-                                class="skill-pct">85%</span></div>
-                        <div class="skill-bar-track">
-                            <div class="skill-bar-fill" data-pct="85"></div>
+                    <div class="skill-chips-container">
+                        <div class="tech-chip">
+                            <div class="tech-chip-icon"><i class="fas fa-chart-pie"></i></div>
+                            <div class="tech-chip-details">
+                                <span class="tech-chip-name">Power BI</span>
+                                <span class="tech-chip-desc">Dashboards &amp; DAX</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-item-header"><span class="skill-name">MySQL</span><span
-                                class="skill-pct">80%</span></div>
-                        <div class="skill-bar-track">
-                            <div class="skill-bar-fill" data-pct="80"></div>
+                        <div class="tech-chip">
+                            <div class="tech-chip-icon"><i class="fas fa-filter"></i></div>
+                            <div class="tech-chip-details">
+                                <span class="tech-chip-name">Power Query</span>
+                                <span class="tech-chip-desc">ETL Transformation</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-item-header"><span class="skill-name">Data Analysis</span><span
-                                class="skill-pct">91%</span></div>
-                        <div class="skill-bar-track">
-                            <div class="skill-bar-fill" data-pct="91"></div>
+                        <div class="tech-chip">
+                            <div class="tech-chip-icon"><i class="fas fa-file-excel"></i></div>
+                            <div class="tech-chip-details">
+                                <span class="tech-chip-name">Advanced Excel</span>
+                                <span class="tech-chip-desc">Pivot &amp; Formulas</span>
+                            </div>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Card 4: Web -->
-                <div class="skill-card">
-                    <div class="skill-icon"><i class="fas fa-code"></i></div>
-                    <h3>Web &amp; App Technologies</h3>
-                    <div class="skill-item">
-                        <div class="skill-item-header"><span class="skill-name">HTML / CSS</span><span
-                                class="skill-pct">85%</span></div>
-                        <div class="skill-bar-track">
-                            <div class="skill-bar-fill" data-pct="85"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-item-header"><span class="skill-name">JavaScript</span><span
-                                class="skill-pct">72%</span></div>
-                        <div class="skill-bar-track">
-                            <div class="skill-bar-fill" data-pct="72"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-item-header"><span class="skill-name">Streamlit</span><span
-                                class="skill-pct">80%</span></div>
-                        <div class="skill-bar-track">
-                            <div class="skill-bar-fill" data-pct="80"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-item-header"><span class="skill-name">Git / GitHub</span><span
-                                class="skill-pct">78%</span></div>
-                        <div class="skill-bar-track">
-                            <div class="skill-bar-fill" data-pct="78"></div>
+                        <div class="tech-chip">
+                            <div class="tech-chip-icon"><i class="fas fa-server"></i></div>
+                            <div class="tech-chip-details">
+                                <span class="tech-chip-name">MySQL</span>
+                                <span class="tech-chip-desc">Database Admin</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 5: Soft Skills -->
+                <!-- Card 4: Web & Developer Tools -->
                 <div class="skill-card">
-                    <div class="skill-icon"><i class="fas fa-users"></i></div>
-                    <h3>Soft Skills</h3>
-                    <div class="skill-item">
-                        <div class="skill-item-header"><span class="skill-name">Problem-Solving</span><span
-                                class="skill-pct">95%</span></div>
-                        <div class="skill-bar-track">
-                            <div class="skill-bar-fill" data-pct="95"></div>
+                    <div class="skill-card-header">
+                        <div class="skill-icon"><i class="fas fa-laptop-code"></i></div>
+                        <h3>Web &amp; Developer Tools</h3>
+                    </div>
+                    <div class="skill-chips-container">
+                        <div class="tech-chip">
+                            <div class="tech-chip-icon"><i class="fab fa-html5"></i></div>
+                            <div class="tech-chip-details">
+                                <span class="tech-chip-name">HTML5 / CSS3</span>
+                                <span class="tech-chip-desc">Responsive Layouts</span>
+                            </div>
+                        </div>
+                        <div class="tech-chip">
+                            <div class="tech-chip-icon"><i class="fab fa-js"></i></div>
+                            <div class="tech-chip-details">
+                                <span class="tech-chip-name">JavaScript</span>
+                                <span class="tech-chip-desc">Dynamic Web Logic</span>
+                            </div>
+                        </div>
+                        <div class="tech-chip">
+                            <div class="tech-chip-icon"><i class="fas fa-rocket"></i></div>
+                            <div class="tech-chip-details">
+                                <span class="tech-chip-name">Streamlit</span>
+                                <span class="tech-chip-desc">Interactive Data Apps</span>
+                            </div>
+                        </div>
+                        <div class="tech-chip">
+                            <div class="tech-chip-icon"><i class="fab fa-github"></i></div>
+                            <div class="tech-chip-details">
+                                <span class="tech-chip-name">Git &amp; GitHub</span>
+                                <span class="tech-chip-desc">Version Control</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="skill-item">
-                        <div class="skill-item-header"><span class="skill-name">Analytical Thinking</span><span
-                                class="skill-pct">90%</span></div>
-                        <div class="skill-bar-track">
-                            <div class="skill-bar-fill" data-pct="90"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-item-header"><span class="skill-name">Logical Thinking</span><span
-                                class="skill-pct">88%</span></div>
-                        <div class="skill-bar-track">
-                            <div class="skill-bar-fill" data-pct="88"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-item-header"><span class="skill-name">Communication</span><span
-                                class="skill-pct">85%</span></div>
-                        <div class="skill-bar-track">
-                            <div class="skill-bar-fill" data-pct="85"></div>
-                        </div>
-                    </div>
+                </div>
+            </div>
+
+            <!-- Dedicated Soft Skills Heading & Section -->
+            <h3 style="text-align: center; font-size: 2.2rem; font-weight: 800; margin: 60px 0 20px 0; color: var(--text-primary);">
+                Soft Skills
+            </h3>
+            <p style="text-align: center; color: var(--text-secondary); margin-bottom: 35px; font-size: 1.05rem;">
+                Key interpersonal abilities driving teamwork, decision making, and leadership
+            </p>
+            <div class="skills-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-puzzle-piece"></i></div>
+                    <h3>Problem Solving</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.5; margin: 0;">
+                        Structured approach to identifying, breaking down, and resolving complex challenges.
+                    </p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-brain"></i></div>
+                    <h3>Analytical Thinking</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.5; margin: 0;">
+                        Extracting meaningful patterns and evidence-based insights from raw data.
+                    </p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-lightbulb"></i></div>
+                    <h3>Logical Thinking</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.5; margin: 0;">
+                        Methodical reasoning to build reliable algorithms and analytical frameworks.
+                    </p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-comments"></i></div>
+                    <h3>Communication</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.5; margin: 0;">
+                        Translating technical findings into clear stories for non-technical stakeholders.
+                    </p>
                 </div>
             </div>
         </div>
@@ -517,6 +576,12 @@
             </div>
             <div class="projects-container">
                 <div class="project-card">
+                    <div class="project-media" onclick="openCertModal('projects/loan-dashboard.png', 'Loan Analysis Dashboard')">
+                        <img src="projects/loan-dashboard.png" alt="Loan Analysis Dashboard Preview" loading="lazy">
+                        <div class="cert-overlay">
+                            <i class="fas fa-search-plus"></i> View Preview
+                        </div>
+                    </div>
                     <div class="project-header">
                         <h3>Loan Analysis Dashboard</h3>
                         <span class="project-badge">Power BI</span>
@@ -540,6 +605,12 @@
                 </div>
 
                 <div class="project-card">
+                    <div class="project-media" onclick="openCertModal('projects/ai-fitness-coach.png', 'AI Fitness Coach')">
+                        <img src="projects/ai-fitness-coach.png" alt="AI Fitness Coach Preview" loading="lazy">
+                        <div class="cert-overlay">
+                            <i class="fas fa-search-plus"></i> View Preview
+                        </div>
+                    </div>
                     <div class="project-header">
                         <h3>AI Fitness Coach</h3>
                         <span class="project-badge">AI/ML</span>
@@ -564,6 +635,12 @@
                 </div>
 
                 <div class="project-card">
+                    <div class="project-media" onclick="openCertModal('projects/local-authority-stats.png', 'Local Authority Statistics Analysis & Visualization')">
+                        <img src="projects/local-authority-stats.png" alt="Local Authority Statistics Analysis Preview" loading="lazy">
+                        <div class="cert-overlay">
+                            <i class="fas fa-search-plus"></i> View Preview
+                        </div>
+                    </div>
                     <div class="project-header">
                         <h3>Local Authority Statistics Analysis & Visualization</h3>
                         <span class="project-badge">Data Analysis</span>
@@ -597,32 +674,41 @@
 
             <div class="experience-section">
                 <div class="training-grid">
-                    <div class="training-card">
-                        <div class="training-header">
-                            <h4>Data Science Intern | CodSoft</h4>
-                            <span class="training-badge">November 2025 - December 2025</span>
+                    <div class="training-card training-card-with-media">
+                        <div class="training-card-media" onclick="openCertModal('certificates/codsoft-internship.png', 'Data Science Internship - CodSoft')">
+                            <img src="certificates/codsoft-internship.png" alt="CodSoft Internship Certificate" loading="lazy">
+                            <div class="cert-overlay">
+                                <i class="fas fa-search-plus"></i> View
+                            </div>
                         </div>
-                        <p class="training-desc">
-                            <strong>Role:</strong> Data Science Intern at CodSoft (November 2025 - December 2025).
-                            Applied an end-to-end data science workflow to deliver actionable risk insights through
-                            rigorous analysis and model evaluation.
-                        </p>
-                        <ul class="training-features">
-                            <li>Analyzed large datasets using Python (Pandas, NumPy)</li>
-                            <li>Performed data cleaning, preprocessing, and feature engineering</li>
-                            <li>Built machine learning models using Scikit-learn</li>
-                            <li>Applied algorithms like Regression and Classification</li>
-                            <li>Evaluated models using accuracy, precision, recall</li>
-                        </ul>
-                        <p class="training-tech"><strong>Tech:</strong> Python, Pandas, NumPy, Scikit-learn, Machine
-                            Learning</p>
-                        <a href="https://drive.google.com/drive/folders/1Wo4HZulzPqBy0zcUigWGD3Wf619MBn8t?usp=drive_link"
-                            target="_blank" class="training-link">
-                            <i class="fas fa-external-link-alt"></i> View Certificate
-                        </a>
-                        <a href="https://github.com/omsainandanreddy14/CODSOFT" target="_blank" class="training-link">
-                            <i class="fab fa-github"></i> View GitHub
-                        </a>
+                        <div class="training-card-content">
+                            <div class="training-header">
+                                <h4>Data Science Intern | CodSoft</h4>
+                                <span class="training-badge">November 2025 - December 2025</span>
+                            </div>
+                            <p class="training-desc">
+                                <strong>Role:</strong> Data Science Intern at CodSoft (November 2025 - December 2025).
+                                Applied an end-to-end data science workflow to deliver actionable risk insights through
+                                rigorous analysis and model evaluation.
+                            </p>
+                            <ul class="training-features">
+                                <li>Analyzed large datasets using Python (Pandas, NumPy)</li>
+                                <li>Performed data cleaning, preprocessing, and feature engineering</li>
+                                <li>Built machine learning models using Scikit-learn</li>
+                                <li>Applied algorithms like Regression and Classification</li>
+                                <li>Evaluated models using accuracy, precision, recall</li>
+                            </ul>
+                            <p class="training-tech"><strong>Tech:</strong> Python, Pandas, NumPy, Scikit-learn, Machine Learning</p>
+                            <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 15px;">
+                                <a href="https://drive.google.com/drive/folders/1Wo4HZulzPqBy0zcUigWGD3Wf619MBn8t?usp=drive_link"
+                                    target="_blank" class="training-link">
+                                    <i class="fas fa-download"></i> Download Certificate
+                                </a>
+                                <a href="https://github.com/omsainandanreddy14/CODSOFT" target="_blank" class="training-link">
+                                    <i class="fab fa-github"></i> View GitHub
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -631,30 +717,40 @@
                 <h3 class="cert-subtitle" style="text-align: left; margin-bottom: 20px; font-size: 1.8rem;">Training
                     Programs</h3>
                 <div class="training-grid">
-                    <div class="training-card">
-                        <div class="training-header">
-                            <h4>Fundamentals of Data Structure using C++</h4>
-                            <span class="training-badge">June 2025 - July 2025</span>
+                    <div class="training-card training-card-with-media">
+                        <div class="training-card-media" onclick="openCertModal('certificates/lpu-dsa-cpp.png', 'Fundamentals of Data Structure using C++ - LPU')">
+                            <img src="certificates/lpu-dsa-cpp.png" alt="LPU C++ Data Structures Certificate" loading="lazy">
+                            <div class="cert-overlay">
+                                <i class="fas fa-search-plus"></i> View
+                            </div>
                         </div>
-                        <p class="training-desc">
-                            <strong>Overview:</strong> Intensive training focused on core Data Structures and Algorithms
-                            (DSA) concepts using C++
-                        </p>
-                        <ul class="training-features">
-                            <li>Arrays, Linked Lists, Stacks, Queues</li>
-                            <li>Trees, Graphs, Searching & Sorting</li>
-                            <li>Recursion & Advanced Algorithms</li>
-                            <li>Bank Account Management System Project</li>
-                        </ul>
-                        <p class="training-tech"><strong>Tech:</strong> C++, OOP, DSA, Problem Solving</p>
-                        <p class="training-outcome">
-                            <strong>Outcome:</strong> Enhanced problem-solving and algorithmic thinking through hands-on
-                            project development
-                        </p>
-                        <a href="https://files.lpu.in/umsweb/skilldevcourse/SkillDevelopmentCertificates/12304471_838_20_08_2025.pdf?_gl=1*18k9i8t*_gcl_au*MzYzNzgyODA3LjE3NjM5MjE2ODY.*_ga*MTk0Njk5NzI2Ny4xNzMzNTA2NzA2*_ga_WKLQCVXZ47*czE3NjM5MjE2ODUkbzIzJGcxJGcxJHQxNzYzOTIxNzAyJGo0MyRsMCRoMA.."
-                            target="_blank" class="training-link">
-                            <i class="fas fa-external-link-alt"></i> View Certificate
-                        </a>
+                        <div class="training-card-content">
+                            <div class="training-header">
+                                <h4>Fundamentals of Data Structure using C++</h4>
+                                <span class="training-badge">June 2025 - July 2025</span>
+                            </div>
+                            <p class="training-desc">
+                                <strong>Overview:</strong> Intensive training focused on core Data Structures and Algorithms
+                                (DSA) concepts using C++
+                            </p>
+                            <ul class="training-features">
+                                <li>Arrays, Linked Lists, Stacks, Queues</li>
+                                <li>Trees, Graphs, Searching &amp; Sorting</li>
+                                <li>Recursion &amp; Advanced Algorithms</li>
+                                <li>Bank Account Management System Project</li>
+                            </ul>
+                            <p class="training-tech"><strong>Tech:</strong> C++, OOP, DSA, Problem Solving</p>
+                            <p class="training-outcome">
+                                <strong>Outcome:</strong> Enhanced problem-solving and algorithmic thinking through hands-on
+                                project development
+                            </p>
+                            <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 15px;">
+                                <a href="https://files.lpu.in/umsweb/skilldevcourse/SkillDevelopmentCertificates/12304471_838_20_08_2025.pdf"
+                                    target="_blank" class="training-link">
+                                    <i class="fas fa-download"></i> Download Certificate
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -666,153 +762,197 @@
             <h2 class="section-title">Certificates</h2>
 
             <div class="cert-section">
-                <div class="cert-grid"
-                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; justify-items: center;">
+                <div class="cert-grid">
+
+                    <!-- 1. Cisco -->
                     <div class="cert-card">
-                        <div class="cert-icon">
-                            <i class="fas fa-certificate"></i>
+                        <div class="cert-img-wrapper" onclick="openCertModal('certificates/cisco-data-analytics.png', 'Data Analytics Essentials - Cisco Networking Academy')">
+                            <img src="certificates/cisco-data-analytics.png" alt="Data Analytics Essentials Certificate" loading="lazy">
+                            <div class="cert-overlay">
+                                <i class="fas fa-search-plus"></i> Quick Preview
+                            </div>
                         </div>
-                        <h4>Data Analytics Essentials</h4>
-                        <p>Cisco Networking Academy</p>
-                        <a href="https://drive.google.com/drive/folders/1h4YOOGb3IGsK7f2Dyd4vy335UQXZOf98?usp=drive_link"
-                            target="_blank" class="cert-link">
-                            <i class="fas fa-external-link-alt"></i> View Certificate
-                        </a>
+                        <div class="cert-card-body">
+                            <h4>Data Analytics Essentials</h4>
+                            <p>Cisco Networking Academy</p>
+                            <div class="cert-actions">
+                                <a href="https://drive.google.com/drive/folders/1h4YOOGb3IGsK7f2Dyd4vy335UQXZOf98?usp=drive_link" target="_blank" class="cert-btn-link" style="width: 100%; text-align: center;">
+                                    <i class="fas fa-download"></i> Download Certificate
+                                </a>
+                            </div>
+                        </div>
                     </div>
 
+                    <!-- 2. AWS -->
                     <div class="cert-card">
-                        <div class="cert-icon">
-                            <i class="fas fa-certificate"></i>
+                        <div class="cert-img-wrapper" onclick="openCertModal('certificates/aws-cloud-practitioner.png', 'AWS Cloud Practitioner Essentials - Amazon Web Services')">
+                            <img src="certificates/aws-cloud-practitioner.png" alt="AWS Cloud Practitioner Essentials Certificate" loading="lazy">
+                            <div class="cert-overlay">
+                                <i class="fas fa-search-plus"></i> Quick Preview
+                            </div>
                         </div>
-                        <h4>AWS Cloud Practitioner Essentials</h4>
-                        <p>Amazon Web Services</p>
-                        <a href="https://drive.google.com/drive/folders/1wQjiSZX1d_2Kci92jNlJO95_Iq0Hz0Tt?usp=drive_link"
-                            target="_blank" class="cert-link">
-                            <i class="fas fa-external-link-alt"></i> View Certificate
-                        </a>
+                        <div class="cert-card-body">
+                            <h4>AWS Cloud Practitioner Essentials</h4>
+                            <p>Amazon Web Services</p>
+                            <div class="cert-actions">
+                                <a href="https://drive.google.com/drive/folders/1wQjiSZX1d_2Kci92jNlJO95_Iq0Hz0Tt?usp=drive_link" target="_blank" class="cert-btn-link" style="width: 100%; text-align: center;">
+                                    <i class="fas fa-download"></i> Download Certificate
+                                </a>
+                            </div>
+                        </div>
                     </div>
 
+                    <!-- 3. Power BI -->
                     <div class="cert-card">
-                        <div class="cert-icon">
-                            <i class="fas fa-certificate"></i>
+                        <div class="cert-img-wrapper" onclick="openCertModal('certificates/simplilearn-powerbi.png', 'Power BI for Beginners - Simplilearn')">
+                            <img src="certificates/simplilearn-powerbi.png" alt="Power BI for Beginners Certificate" loading="lazy">
+                            <div class="cert-overlay">
+                                <i class="fas fa-search-plus"></i> Quick Preview
+                            </div>
                         </div>
-                        <h4>Power BI for Beginners</h4>
-                        <p>Simplilearn</p>
-                        <a href="https://certificates.simplicdn.net/share/9368904_96343241762780217245.pdf"
-                            target="_blank" class="cert-link">
-                            <i class="fas fa-external-link-alt"></i> View Certificate
-                        </a>
+                        <div class="cert-card-body">
+                            <h4>Power BI for Beginners</h4>
+                            <p>Simplilearn</p>
+                            <div class="cert-actions">
+                                <a href="https://certificates.simplicdn.net/share/9368904_96343241762780217245.pdf" target="_blank" class="cert-btn-link" style="width: 100%; text-align: center;">
+                                    <i class="fas fa-download"></i> Download Certificate
+                                </a>
+                            </div>
+                        </div>
                     </div>
 
+                    <!-- 4. Udemy GenAI -->
                     <div class="cert-card">
-                        <div class="cert-icon">
-                            <i class="fas fa-certificate"></i>
+                        <div class="cert-img-wrapper" onclick="openCertModal('certificates/udemy-genai.png', 'Master Generative AI & Tools - Udemy')">
+                            <img src="certificates/udemy-genai.png" alt="Master Generative AI & Tools Certificate" loading="lazy">
+                            <div class="cert-overlay">
+                                <i class="fas fa-search-plus"></i> Quick Preview
+                            </div>
                         </div>
-                        <h4>Master Generative AI & Tools</h4>
-                        <p>Udemy</p>
-                        <a href="https://drive.google.com/drive/folders/1eso8qGCC0bRNGmqi6tnePwwtLVOBDeR2?usp=drive_link"
-                            target="_blank" class="cert-link">
-                            <i class="fas fa-external-link-alt"></i> View Certificate
-                        </a>
+                        <div class="cert-card-body">
+                            <h4>Master Generative AI & Tools</h4>
+                            <p>Udemy</p>
+                            <div class="cert-actions">
+                                <a href="https://drive.google.com/drive/folders/1eso8qGCC0bRNGmqi6tnePwwtLVOBDeR2?usp=drive_link" target="_blank" class="cert-btn-link" style="width: 100%; text-align: center;">
+                                    <i class="fas fa-download"></i> Download Certificate
+                                </a>
+                            </div>
+                        </div>
                     </div>
 
+                    <!-- 5. NPTEL -->
                     <div class="cert-card">
-                        <div class="cert-icon">
-                            <i class="fas fa-certificate"></i>
+                        <div class="cert-img-wrapper" onclick="openCertModal('certificates/nptel-cloud-computing.png', 'NPTEL Cloud Computing - IIT Kharagpur')">
+                            <img src="certificates/nptel-cloud-computing.png" alt="NPTEL Cloud Computing Certificate" loading="lazy">
+                            <div class="cert-overlay">
+                                <i class="fas fa-search-plus"></i> Quick Preview
+                            </div>
                         </div>
-                        <h4>NPTEL Cloud Computing</h4>
-                        <p>IIT Bombay</p>
-                        <a href="https://drive.google.com/file/d/1Uu2LD_DEUL9RAS6ab6WKTAGMmo9s40pc/view?usp=drive_link"
-                            target="_blank" class="cert-link">
-                            <i class="fas fa-external-link-alt"></i> View Certificate
-                        </a>
+                        <div class="cert-card-body">
+                            <h4>NPTEL Cloud Computing</h4>
+                            <p>IIT Kharagpur</p>
+                            <div class="cert-actions">
+                                <a href="https://drive.google.com/file/d/1Uu2LD_DEUL9RAS6ab6WKTAGMmo9s40pc/view?usp=drive_link" target="_blank" class="cert-btn-link" style="width: 100%; text-align: center;">
+                                    <i class="fas fa-download"></i> Download Certificate
+                                </a>
+                            </div>
+                        </div>
                     </div>
 
+                    <!-- 6. FreeCodeCamp -->
                     <div class="cert-card">
-                        <div class="cert-icon">
-                            <i class="fas fa-certificate"></i>
+                        <div class="cert-img-wrapper" onclick="openCertModal('certificates/freecodecamp-web-design.png', 'Responsive Web Design - FreeCodeCamp')">
+                            <img src="certificates/freecodecamp-web-design.png" alt="Responsive Web Design Certificate" loading="lazy">
+                            <div class="cert-overlay">
+                                <i class="fas fa-search-plus"></i> Quick Preview
+                            </div>
                         </div>
-                        <h4>Responsive Web Design</h4>
-                        <p>FreeCodeCamp</p>
-                        <a href="https://www.freecodecamp.org/certification/fcc1fb04b39-03a9-4d40-a673-ef57db5725cb/responsive-web-design"
-                            target="_blank" class="cert-link">
-                            <i class="fas fa-external-link-alt"></i> View Certificate
-                        </a>
+                        <div class="cert-card-body">
+                            <h4>Responsive Web Design</h4>
+                            <p>FreeCodeCamp</p>
+                            <div class="cert-actions">
+                                <a href="https://www.freecodecamp.org/certification/fcc1fb04b39-03a9-4d40-a673-ef57db5725cb/responsive-web-design" target="_blank" class="cert-btn-link" style="width: 100%; text-align: center;">
+                                    <i class="fas fa-download"></i> Download Certificate
+                                </a>
+                            </div>
+                        </div>
                     </div>
 
+                    <!-- 7. Deloitte -->
                     <div class="cert-card">
-                        <div class="cert-icon">
-                            <i class="fas fa-certificate"></i>
+                        <div class="cert-img-wrapper" onclick="openCertModal('certificates/deloitte-data-analytics.png', 'Data Analytics Job Simulation - Deloitte')">
+                            <img src="certificates/deloitte-data-analytics.png" alt="Data Analytics Job Simulation Certificate" loading="lazy">
+                            <div class="cert-overlay">
+                                <i class="fas fa-search-plus"></i> Quick Preview
+                            </div>
                         </div>
-                        <h4>Data Analytics Job Simulation</h4>
-                        <p>Deloitte</p>
-                        <a href="https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_69102990a3fe2df04782f259_1763556170144_completion_certificate.pdf"
-                            target="_blank" class="cert-link">
-                            <i class="fas fa-external-link-alt"></i> View Certificate
-                        </a>
+                        <div class="cert-card-body">
+                            <h4>Data Analytics Job Simulation</h4>
+                            <p>Deloitte</p>
+                            <div class="cert-actions">
+                                <a href="https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_69102990a3fe2df04782f259_1763556170144_completion_certificate.pdf" target="_blank" class="cert-btn-link" style="width: 100%; text-align: center;">
+                                    <i class="fas fa-download"></i> Download Certificate
+                                </a>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>
-
     </section>
 
+    <!-- ====== ACHIEVEMENTS SECTION ====== -->
     <section id="achievements" class="certifications-section" style="background: rgba(10, 20, 40, 0.4);">
         <div class="section-container">
-            <h2 class="section-title">Achievements & Activities</h2>
+            <h2 class="section-title">Achievements &amp; Activities</h2>
 
-            <div class="training-grid">
-                <!-- Volunteering -->
-                <div class="training-card"
-                    style="margin-bottom: 20px; transition: transform 0.3s; border-left: 4px solid var(--primary-color);">
-                    <h4 style="color: var(--secondary-color); font-size: 1.3rem; margin-bottom: 15px;"><i
-                            class="fas fa-hands-helping" style="margin-right: 10px;"></i> Volunteering & Community
-                        Service</h4>
-                    <ul class="training-features" style="list-style-type: none; padding: 0;">
-                        <li style="margin-bottom: 10px; font-size: 1.05rem;">
-                            <i class="fas fa-check-circle" style="color: var(--primary-color); margin-right: 10px;"></i>
-                            Volunteered at Jhansi Old Age Home, supporting elderly care and community development
-                            initiatives.
-                        </li>
-                    </ul>
+            <div class="achievements-photo-grid">
+                <!-- 1. Volunteering -->
+                <div class="achieve-card-photo">
+                    <h4 class="achieve-photo-title">
+                        <i class="fas fa-hands-helping"></i> Volunteering &amp; Community Service
+                    </h4>
+                    <div class="achieve-photo-body">
+                        <span class="achieve-check-badge"><i class="fas fa-check"></i></span>
+                        <div>Volunteered at Jhansi Old Age Home, supporting elderly care and community development initiatives.</div>
+                    </div>
                 </div>
 
-                <!-- Hackathons -->
-                <div class="training-card"
-                    style="margin-bottom: 20px; transition: transform 0.3s; border-left: 4px solid var(--primary-color);">
-                    <h4 style="color: var(--secondary-color); font-size: 1.3rem; margin-bottom: 15px;"><i
-                            class="fas fa-trophy" style="margin-right: 10px;"></i> Hackathons & Coding Events</h4>
-                    <ul class="training-features" style="list-style-type: none; padding: 0;">
-                        <li style="margin-bottom: 10px; font-size: 1.05rem;">
-                            <i class="fas fa-check-circle" style="color: var(--primary-color); margin-right: 10px;"></i>
-                            Participated in Code-A-Haunt Hackathon organized by Coding Blocks LPU
-                            <a href="https://drive.google.com/drive/folders/1BT1vxH9zyvoRNu62MC-JYS86eohaqQJa?usp=drive_link"
-                                target="_blank"
-                                style="color: var(--primary-color); margin-left: 10px; text-decoration: none; font-weight: bold;"><i
-                                    class="fas fa-external-link-alt"></i> View Certificate</a>
-                        </li>
-                    </ul>
+                <!-- 2. Hackathons -->
+                <div class="achieve-card-photo">
+                    <h4 class="achieve-photo-title">
+                        <i class="fas fa-trophy"></i> Hackathons &amp; Coding Events
+                    </h4>
+                    <div class="achieve-photo-body">
+                        <span class="achieve-check-badge"><i class="fas fa-check"></i></span>
+                        <div>
+                            Participated in Code-A-Haunt Hackathon organized by Coding Blocks LPU.
+                            <div style="margin-top: 10px;">
+                                <a href="https://drive.google.com/drive/folders/1BT1vxH9zyvoRNu62MC-JYS86eohaqQJa?usp=drive_link"
+                                    target="_blank" class="achieve-cert-inline-link" style="margin-left: 0;">
+                                    <i class="fas fa-external-link-alt"></i> View Certificate
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Problem Solving -->
-                <div class="training-card"
-                    style="margin-bottom: 20px; transition: transform 0.3s; border-left: 4px solid var(--primary-color);">
-                    <h4 style="color: var(--secondary-color); font-size: 1.3rem; margin-bottom: 15px;"><i
-                            class="fas fa-code" style="margin-right: 10px;"></i> Technical Problem Solving</h4>
-                    <ul class="training-features" style="list-style-type: none; padding: 0;">
-                        <li style="margin-bottom: 10px; font-size: 1.05rem;">
-                            <i class="fas fa-check-circle" style="color: var(--primary-color); margin-right: 10px;"></i>
-                            Actively solving problems on LeetCode. Demonstrating strong algorithmic knowledge and
-                            continuous self-improvement in data structures.
-                        </li>
-                    </ul>
+                <!-- 3. Problem Solving -->
+                <div class="achieve-card-photo">
+                    <h4 class="achieve-photo-title">
+                        <i class="fas fa-code"></i> Technical Problem Solving
+                    </h4>
+                    <div class="achieve-photo-body">
+                        <span class="achieve-check-badge"><i class="fas fa-check"></i></span>
+                        <div>Actively solving problems on LeetCode. Demonstrating strong algorithmic knowledge and continuous self-improvement in data structures.</div>
+                    </div>
                 </div>
-
             </div>
         </div>
     </section>
 
-
+    <!-- ====== CONTACT SECTION ====== -->
     <section id="contact" class="contact-section">
         <div class="section-container">
             <h2 class="section-title">Get In Touch</h2>
@@ -957,14 +1097,27 @@
         </div>
     </section>
 
-
-
     <footer class="footer">
         <div class="section-container">
             <p>&copy; 2026 Omsai Nandan Reddy | Data Analyst & Computer Science Professional</p>
             <p class="footer-subtitle">Crafted with <i class="fas fa-heart"></i> and passion for data</p>
         </div>
     </footer>
+
+    <!-- Certificate Lightbox Modal -->
+    <div id="certModal" class="cert-modal-overlay">
+        <div class="cert-modal-content">
+            <div class="cert-modal-header">
+                <span id="certModalTitle" class="cert-modal-title">Certificate Photo</span>
+                <button type="button" class="cert-modal-close" onclick="closeCertModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="cert-modal-body">
+                <img id="certModalImg" src="" alt="Certificate Large Preview">
+            </div>
+        </div>
+    </div>
 
     <!-- tsParticles -->
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>

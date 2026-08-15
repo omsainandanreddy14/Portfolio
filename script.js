@@ -6,22 +6,22 @@ if (typeof tsParticles !== 'undefined') {
       detectsOn: "window",
       events: {
         onClick: { enable: true, mode: "push" },
-        onHover: { enable: true, mode: "grab", parallax: { enable: true, force: 60, smooth: 10 } },
+        onHover: { enable: true, mode: "grab", parallax: { enable: true, force: 40, smooth: 10 } },
         resize: true
       },
       modes: {
-        push: { quantity: 4 },
-        grab: { distance: 200, links: { opacity: 0.8, color: "#38bdf8" } }
+        push: { quantity: 5 },
+        grab: { distance: 220, links: { opacity: 0.85, color: "#38bdf8" } }
       }
     },
     particles: {
-      color: { value: "#0ea5e9" },
+      color: { value: ["#0ea5e9", "#38bdf8", "#818cf8", "#38bdf8"] },
       links: {
         color: "#38bdf8",
-        distance: 150,
+        distance: 140,
         enable: true,
-        opacity: 0.4,
-        width: 1
+        opacity: 0.35,
+        width: 1.2
       },
       collisions: { enable: false },
       move: {
@@ -29,18 +29,18 @@ if (typeof tsParticles !== 'undefined') {
         enable: true,
         outModes: { default: "bounce" },
         random: true,
-        speed: 1.5,
+        speed: 1.8,
         straight: false
       },
-      number: { density: { enable: true, area: 800 }, value: 80 },
+      number: { density: { enable: true, area: 750 }, value: 90 },
       opacity: {
-        value: 0.6,
-        animation: { enable: true, speed: 1, minimumValue: 0.1 }
+        value: { min: 0.2, max: 0.8 },
+        animation: { enable: true, speed: 1.5, minimumValue: 0.2, sync: false }
       },
       shape: { type: "circle" },
       size: {
-        value: { min: 1, max: 3 },
-        animation: { enable: true, speed: 2, minimumValue: 0.5 }
+        value: { min: 1.5, max: 4 },
+        animation: { enable: true, speed: 2, minimumValue: 0.8, sync: false }
       }
     },
     detectRetina: true
@@ -226,19 +226,25 @@ const statsObserver = new IntersectionObserver(function (entries) {
     if (entry.isIntersecting && !statsAnimated) {
       statsAnimated = true;
       stats.forEach(stat => {
-        const target = parseInt(stat.textContent);
-        const increment = target / 50;
+        const fullText = stat.textContent.trim();
+        const target = parseFloat(fullText);
+        const hasPlus = fullText.includes('+');
+        const isFloat = fullText.includes('.');
+        const duration = 1500;
+        const steps = 50;
+        const stepTime = duration / steps;
+        const increment = target / steps;
         let current = 0;
 
         const timer = setInterval(() => {
           current += increment;
           if (current >= target) {
-            stat.textContent = target + (stat.textContent.includes('+') ? '+' : '');
+            stat.textContent = target + (hasPlus ? '+' : '');
             clearInterval(timer);
           } else {
-            stat.textContent = Math.floor(current) + (stat.textContent.includes('+') ? '+' : '');
+            stat.textContent = (isFloat ? current.toFixed(1) : Math.floor(current)) + (hasPlus ? '+' : '');
           }
-        }, 30);
+        }, stepTime);
       });
     }
   });
@@ -283,9 +289,47 @@ const skillObserver = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.2 });
 
-const skillsSection = document.querySelector('.skills-section');
+const skillsSection = document.querySelector('#skills');
 if (skillsSection) skillObserver.observe(skillsSection);
 
+// ==================== CERTIFICATE LIGHTBOX MODAL ====================
+function openCertModal(imageSrc, title) {
+  const modal = document.getElementById('certModal');
+  const modalImg = document.getElementById('certModalImg');
+  const modalTitle = document.getElementById('certModalTitle');
+
+  if (modal && modalImg && modalTitle) {
+    modalImg.src = imageSrc;
+    modalTitle.textContent = title || 'Certificate Preview';
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function closeCertModal() {
+  const modal = document.getElementById('certModal');
+  if (modal) {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const modal = document.getElementById('certModal');
+  if (modal) {
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeCertModal();
+      }
+    });
+  }
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    closeCertModal();
+  }
+});
 
 // ==================== CONSOLE MESSAGE ====================
 console.log('%cWelcome to Putluru Om Sai Nandan Reddy\'s Portfolio!', 'font-size: 20px; color: #0ea5e9; font-weight: bold;');
